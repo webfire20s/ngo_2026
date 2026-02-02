@@ -1,0 +1,297 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+    --primary: #0b3c5d;
+    --secondary: #6328ee;
+    --accent: #f9c74f;
+    --light: #f8f9fa;
+    --dark-text: #333;
+    --transition: all 0.3s ease;
+}
+
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Logo */
+.logo a {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 6px 0;
+    position: relative;
+}
+
+/* Hover + Active */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(rgba(116, 33, 224, 0.7), rgba(32,18,158,0.7)),
+        url("../images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: var(--primary);
+}
+
+.hero-buttons,
+.cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ================= PAGE HERO ================= */
+.page-hero {
+    height: 30vh;
+    background: linear-gradient(135deg, #5726dd, #8128e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.page-hero-content h1 {
+    font-size: 40px;
+}
+
+/* ================= CTA ================= */
+.cta-section {
+    height: 35vh;
+    background: linear-gradient(135deg, #5726dd, #8128e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* ================= SECTION HEADERS ================= */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.section-header h2 {
+    font-size: 34px;
+    color: var(--primary);
+}
+
+.section-header p {
+    font-size: 17px;
+    color: #555;
+}
+
+/* ================= FOUNDATION / COURSES / GALLERY ================= */
+.foundation-boxes,
+.courses-boxes,
+.gallery-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.foundation-boxes,
+.courses-boxes {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.foundation-box,
+.course-box,
+.gallery-item {
+    background: var(--light);
+    padding: 35px 25px;
+    border-radius: 9px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.foundation-box:hover,
+.course-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-item {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive grids */
+@media (max-width: 900px) {
+    .foundation-boxes,
+    .courses-boxes,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .foundation-boxes,
+    .courses-boxes,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= FOOTER ================= */
+.footer-main {
+    background: var(--primary);
+    color: #fff;
+    padding: 50px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 14px;
+}
