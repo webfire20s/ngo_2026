@@ -1,59 +1,45 @@
 <?php
-$page_title = "Events | Neel Foundation";
-$active = "events";
 include 'includes/header.php';
+include 'includes/db.php';
 ?>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-    <div class="page-hero-content">
-        <h1>Events</h1>
-        <p>Join us in our upcoming and past initiatives</p>
-    </div>
+<main>
+
+<section class="py-20 gradient-bg text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-bold">Our Events</h1>
+    <p class="text-xl mt-4">Latest programs & activities</p>
 </section>
 
-<!-- EVENTS SECTION -->
-<section class="foundation-section">
-    <div class="container">
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <div class="section-header">
-            <h2>Our Events</h2>
-            <p>Programs and campaigns organized to create social impact</p>
-        </div>
+<?php
+$res = $conn->query("SELECT * FROM events ORDER BY id DESC");
+if ($res->num_rows == 0):
+?>
+    <p class="text-center col-span-3 text-gray-600">No events available.</p>
+<?php
+endif;
 
-        <div class="foundation-boxes">
-            <div class="foundation-box">
-                <h3>Health Awareness Camp</h3>
-                <p>Free health check-ups and awareness sessions for local communities.</p>
-            </div>
+while ($row = $res->fetch_assoc()):
+?>
+<div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+    <?php if ($row['photo']) { ?>
+        <img src="uploads/<?= $row['photo'] ?>" class="w-full h-48 object-cover">
+    <?php } ?>
 
-            <div class="foundation-box">
-                <h3>Education Drive</h3>
-                <p>Distribution of educational resources to underprivileged students.</p>
-            </div>
-
-            <div class="foundation-box">
-                <h3>Skill Development Workshop</h3>
-                <p>Hands-on training sessions focused on employable skills.</p>
-            </div>
-
-            <div class="foundation-box">
-                <h3>Women Empowerment Seminar</h3>
-                <p>Workshops promoting self-reliance and leadership among women.</p>
-            </div>
-
-            <div class="foundation-box">
-                <h3>Environmental Campaign</h3>
-                <p>Tree plantation and cleanliness drives for a greener future.</p>
-            </div>
-
-            <div class="foundation-box">
-                <h3>Youth Leadership Program</h3>
-                <p>Encouraging youth involvement in social responsibility initiatives.</p>
-            </div>
-        </div>
-
+    <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2"><?= htmlspecialchars($row['title']) ?></h3>
+        <p class="text-gray-600">
+            <?= substr(strip_tags($row['description']), 0, 120) ?>...
+        </p>
     </div>
+</div>
+<?php endwhile; ?>
+
+</div>
 </section>
+
+</main>
 
 <?php include 'includes/footer.php'; ?>

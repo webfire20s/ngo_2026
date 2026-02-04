@@ -1,36 +1,40 @@
 <?php
-$page_title = "Gallery | Neel Foundation";
-$active = "gallery";
 include 'includes/header.php';
+include 'includes/db.php';
 ?>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-    <div class="page-hero-content">
-        <h1>Gallery</h1>
-        <p>Moments captured from our initiatives and events</p>
-    </div>
+<main>
+<section class="py-20 gradient-bg text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-bold">Gallery</h1>
 </section>
 
-<!-- GALLERY SECTION -->
-<section class="gallery-section">
-    <div class="container">
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-        <div class="section-header">
-            <h2>Our Work in Pictures</h2>
-            <p>A glimpse into our activities, programs, and community impact</p>
+<?php
+$res = $conn->query("SELECT * FROM gallery ORDER BY id DESC");
+
+if ($res->num_rows == 0):
+?>
+    <p class="text-gray-500 text-center col-span-3">
+        No images available.
+    </p>
+<?php
+endif;
+
+while ($row = $res->fetch_assoc()):
+?>
+    <div class="bg-gray-50 rounded-lg shadow overflow-hidden">
+        <img src="uploads/<?= $row['photo'] ?>"
+             class="w-full h-64 object-cover">
+        <div class="p-4 text-center font-semibold">
+            <?= htmlspecialchars($row['title']) ?>
         </div>
-
-        <div class="gallery-grid">
-            <div class="gallery-item">Community Program</div>
-            <div class="gallery-item">Education Drive</div>
-            <div class="gallery-item">Health Camp</div>
-            <div class="gallery-item">Training Workshop</div>
-            <div class="gallery-item">Awareness Campaign</div>
-            <div class="gallery-item">Volunteer Meet</div>
-        </div>
-
     </div>
+<?php endwhile; ?>
+
+</div>
 </section>
+</main>
 
 <?php include 'includes/footer.php'; ?>

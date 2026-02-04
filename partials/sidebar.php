@@ -40,6 +40,36 @@
                 <i class="mdi mdi-flask menu-icon"></i>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact-messages.php">
+                <span class="menu-title">Contact</span>
+                <i class="mdi mdi-flask menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="manage-members.php">
+                <span class="menu-title">Members</span>
+                <i class="mdi mdi-flask menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="manage-events.php">
+                <span class="menu-title">Events</span>
+                <i class="mdi mdi-flask menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="manage-gallery.php">
+                <span class="menu-title">Gallery</span>
+                <i class="mdi mdi-flask menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="manage-notices.php">
+                <span class="menu-title">Notices</span>
+                <i class="mdi mdi-flask menu-icon"></i>
+            </a>
+        </li>
 
         <li class="nav-item">
             <a class="nav-link" href="logout.php">

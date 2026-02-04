@@ -116,15 +116,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="https://neelkranti.webfiredegitech.com" class="flex-shrink-0 flex items-center">
-                        <img src="https://neelkranti.webfiredegitech.com/images/logo.png" alt="Neelkranti Foundation" class="h-10 w-auto mr-3">
+                    <a href="index.php" class="flex-shrink-0 flex items-center">
                         <span class="text-xl font-bold text-gradient">Neelkranti Foundation</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://neelkranti.webfiredegitech.com" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="index.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                     
                     <!-- About Dropdown -->
                     <div class="relative group">

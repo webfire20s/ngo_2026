@@ -61,6 +61,52 @@ include 'includes/auth.php';
                         </div>
 
                         <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-info text-white text-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Contact Messages</h4>
+                                    <a href="contact-messages.php" class="btn btn-light mt-2">View</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-success text-white text-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Manage Members</h4>
+                                    <a href="manage-members.php" class="btn btn-light mt-2">View</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-primary text-white text-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Manage Events</h4>
+                                    <a href="manage-events.php" class="btn btn-light mt-2">View</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-success text-white text-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Manage Gallery</h4>
+                                    <a href="manage-gallery.php" class="btn btn-light mt-2">View</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-primary text-white text-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Manage Notices</h4>
+                                    <a href="manage-notices.php" class="btn btn-light mt-2">View</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 stretch-card grid-margin">
                             <div class="card bg-danger text-white text-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Logout</h4>
