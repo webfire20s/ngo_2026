@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $photo = '';
     if (!empty($_FILES['photo']['name'])) {
         $photo = time() . '_' . $_FILES['photo']['name'];
-        move_uploaded_file($_FILES['photo']['tmp_name'], "../uploads/gallery" . $photo);
+        move_uploaded_file($_FILES['photo']['tmp_name'], "../uploads/gallery/" . $photo);
     }
 
     $stmt = $conn->prepare(
