@@ -165,6 +165,41 @@ function e($value, $fallback = '') {
 
 
 
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Our Partners
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Organizations that support our mission
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+
+            <?php while ($row = $partners->fetch_assoc()): ?>
+                <div class="bg-gray-50 p-4 rounded-lg flex items-center justify-center h-24">
+                    
+                    <?php if ($row['logo']): ?>
+                        <img src="uploads/partners/<?= $row['logo'] ?>"
+                             class="max-h-16"
+                             alt="<?= htmlspecialchars($row['partner_name']) ?>">
+                    <?php else: ?>
+                        <span class="text-gray-600 font-semibold">
+                            <?= htmlspecialchars($row['partner_name']) ?>
+                        </span>
+                    <?php endif; ?>
+
+                </div>
+            <?php endwhile; ?>
+
+        </div>
+    </div>
+</section>
+
+
+
 <!-- Call to Action (UNCHANGED) -->
 <section class="py-20 gradient-bg text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
