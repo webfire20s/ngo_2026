@@ -53,6 +53,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="memberships.php">
+                <span class="menu-title">Memberships</span>
+                <i class="mdi mdi-flask menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="manage-events.php">
                 <span class="menu-title">Events</span>
                 <i class="mdi mdi-flask menu-icon"></i>

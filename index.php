@@ -21,7 +21,7 @@ include 'includes/db.php';
             Empowering communities through sustainable fish culture, research, and social welfare initiatives
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
-            <a href="https://neelkranti.webfiredegitech.com/membership/apply" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors hover-scale">
+            <a href="membership_apply.php" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors hover-scale">
                 Join Our Community
             </a>
             <a href="https://neelkranti.webfiredegitech.com/donate" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition-colors hover-scale">

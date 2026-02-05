@@ -38,7 +38,7 @@
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="about.php" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="membership/apply" class="text-gray-300 hover:text-white transition-colors">Apply for Membership</a></li>
+                        <li><a href="membership_apply.php" class="text-gray-300 hover:text-white transition-colors">Apply for Membership</a></li>
                         <li><a href="courses.php" class="text-gray-300 hover:text-white transition-colors">Courses</a></li>
                         <li><a href="donate" class="text-gray-300 hover:text-white transition-colors">Donate</a></li>
                         <li><a href="gallery.php" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
@@ -81,23 +81,24 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/911234567890?text=Hello%20Neelkranti%20Foundation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+    <a href="https://wa.me/919284476047?text=Hello%20Neelkranti%20Foundation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
        class="whatsapp-float bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors float-animation" 
        target="_blank">
         <i class="fab fa-whatsapp text-xl"></i>
     </a>
 
     <!-- Call Button -->
-    <a href="tel:+911234567890" 
+    <a href="tel:+919284476047" 
        class="call-float bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors float-animation">
         <i class="fas fa-phone text-xl"></i>
     </a>
 
-    <!-- Visitor Counter -->
+    <!-- Visitor Counter 
     <div class="fixed bottom-4 right-4 bg-gray-800 text-white px-3 py-2 rounded-lg text-xs z-40">
         <i class="fas fa-eye mr-1"></i>
         Visitors: 0
     </div>
+    -->
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
