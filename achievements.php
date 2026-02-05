@@ -1,3 +1,9 @@
+<?php
+$page_title = "Achievements | Neel Foundation";
+$active = "achievements";
+include 'includes/header.php';
+?>
+
 <!-- Main Content -->
     <main>
         <!-- Hero Section -->

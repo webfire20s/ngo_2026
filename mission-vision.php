@@ -1,3 +1,8 @@
+<?php
+$page_title = "Mission & Vision | Neel Foundation";
+$active = "mission-vision";
+include 'includes/header.php';
+?>
 <!-- Main Content -->
     <main>
         <!-- Hero Section -->

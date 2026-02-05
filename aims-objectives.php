@@ -1,3 +1,9 @@
+<?php
+$page_title = "Aims & Objectives | Neel Foundation";
+$active = "aims-objectives";
+include 'includes/header.php';
+?>
+
 <!-- Main Content -->
     <main>
         <!-- Hero Section -->
