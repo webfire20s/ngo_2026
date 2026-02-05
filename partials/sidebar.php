@@ -20,6 +20,16 @@
             </a>
         </li>
 
+
+        <li class="nav-item">
+            <a class="nav-link" href="manage-about.php">
+                <span class="menu-title">About</span>
+                <i class="mdi mdi-view-dashboard menu-icon"></i>
+            </a>
+        </li>
+
+        
+
         <li class="nav-item">
             <a class="nav-link" href="manage-courses.php">
                 <span class="menu-title">Courses</span>

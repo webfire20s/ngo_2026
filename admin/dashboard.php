@@ -32,7 +32,18 @@ include 'includes/auth.php';
                         </div>
                     </div>
 
+                
                     <div class="row">
+
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-danger text-white text-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Manage About</h4>
+                                    <a href="manage-about.php" class="btn btn-light mt-2">Go</a>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-3 stretch-card grid-margin">
                             <div class="card bg-primary text-white text-center">
                                 <div class="card-body">
