@@ -33,9 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Admin Login</title>
 
     <!-- Purple Admin CSS -->
-    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -81,8 +81,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 
 <!-- Purple Admin JS -->
-<script src="assets/vendors/js/vendor.bundle.base.js"></script>
-<script src="assets/js/off-canvas.js"></script>
-<script src="assets/js/template.js"></script>
+<script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="../assets/js/off-canvas.js"></script>
+<script src="../assets/js/template.js"></script>
 </body>
 </html>
