@@ -94,69 +94,179 @@ include 'includes/header.php';
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Recent Activities</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Activities</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our latest initiatives and their impact on communities
+                Skill development and hands-on training programs conducted by our institute
             </p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://neelkranti.webfiredegitech.com/images/activity-1.jpg" alt="Fish Culture Training" class="w-full h-48 object-cover">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Activity Card -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activity-1.jpg" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex items-center mb-3">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Training</span>
-                        <span class="text-sm text-gray-500 ml-2">March 2024</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Advanced Fish Culture Training</h3>
-                    <p class="text-gray-600 mb-4">
-                        Conducted a 15-day intensive training program on modern fish culture techniques for 50 farmers from Bihar and Uttar Pradesh.
-                    </p>
-                    <div class="text-sm text-gray-500">
-                        <i class="fas fa-users mr-1"></i> 50 Participants | 
-                        <i class="fas fa-map-marker-alt mr-1"></i> Patna
-                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Training</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Freshwater Fish Culture</h3>
                 </div>
             </div>
-            
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://neelkranti.webfiredegitech.com/images/activity-2.jpg" alt="Awareness Camp" class="w-full h-48 object-cover">
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-2.jpg" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex items-center mb-3">
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Awareness</span>
-                        <span class="text-sm text-gray-500 ml-2">February 2024</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Environmental Awareness Camp</h3>
-                    <p class="text-gray-600 mb-4">
-                        Organized an environmental awareness camp for school students, educating them about water conservation and biodiversity.
-                    </p>
-                    <div class="text-sm text-gray-500">
-                        <i class="fas fa-users mr-1"></i> 200 Students | 
-                        <i class="fas fa-map-marker-alt mr-1"></i> Ranchi
-                    </div>
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Training</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Fish Seed Production</h3>
                 </div>
             </div>
-            
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://neelkranti.webfiredegitech.com/images/activity-3.jpg" alt="Workshop" class="w-full h-48 object-cover">
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-3.jpg" class="w-full h-48 object-cover">
                 <div class="p-6">
-                    <div class="flex items-center mb-3">
-                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Workshop</span>
-                        <span class="text-sm text-gray-500 ml-2">January 2024</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Women Empowerment Workshop</h3>
-                    <p class="text-gray-600 mb-4">
-                        Conducted a special workshop on fish processing and value addition for women entrepreneurs from rural areas.
-                    </p>
-                    <div class="text-sm text-gray-500">
-                        <i class="fas fa-users mr-1"></i> 30 Women | 
-                        <i class="fas fa-map-marker-alt mr-1"></i> Varanasi
-                    </div>
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Training</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Culture of Ornamental Fishes</h3>
                 </div>
             </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-4.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Skill</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Fabrication of Aquarium</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-5.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Production</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Fish Feed Production</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-6.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Processing</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Fish Processing & Preservation</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-7.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Production</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Production of Biofertilizer</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-8.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Production</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Fish By-Product Production</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-9.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Value Added</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Value Added Fish Products</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-10.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Eco</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Vermi Compost Production</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-11.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Agriculture</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Honey Bee Culture</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-12.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Lab</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Water Analysis Techniques</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-13.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Farming</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Goat Farming</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-14.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Healthcare</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Blood Bank Working</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-15.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Herbal</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Herbal Beauty Products</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-16.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Herbal</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Production of Herbal Remedies</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-17.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Processing</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Fruits & Vegetables Processing</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-18.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Technology</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Dehydration Technology</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-19.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Agriculture</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Mushroom Culture</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
+                <img src="images/activities/activity-20.jpg" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Skill</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-3">Plant Grafting Techniques</h3>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
 
 <!-- Ongoing Projects -->
 <section class="py-20 bg-white">
