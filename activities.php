@@ -104,7 +104,7 @@ include 'includes/header.php';
 
             <!-- Activity Card -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover-scale">
-                <img src="images/activity-1.jpg" class="w-full h-48 object-cover">
+                <img src="images/activities/activity-1.jpg" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Training</span>
                     <h3 class="text-xl font-semibold text-gray-800 mt-3">Freshwater Fish Culture</h3>
