@@ -1,9 +1,18 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php'; 
+include 'includes/db.php';
+?>
+
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center gradient-bg text-white">
+<section class="relative h-screen flex items-center justify-center text-white">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/heroimage.png');"></div>
+    
+    <!-- Dark overlay for text readability -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+    <!-- Text content -->
     <div class="relative z-10 text-center px-4">
         <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">
             Welcome to Neelkranti Foundation
@@ -20,6 +29,8 @@
             </a>
         </div>
     </div>
+    
+    <!-- Scroll down arrow -->
     <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <i class="fas fa-chevron-down text-2xl"></i>
     </div>
@@ -87,7 +98,7 @@
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Freshwater Fish Culture</h3>
                     <p class="text-gray-600 mb-4">Comprehensive training in modern fish farming techniques</p>
-                    <a href="https://neelkranti.webfiredegitech.com/courses" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                    <a href="courses.php" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
                 </div>
             </div>
             
@@ -98,7 +109,7 @@
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Fish Seed Production</h3>
                     <p class="text-gray-600 mb-4">Learn breeding and hatchery management techniques</p>
-                    <a href="https://neelkranti.webfiredegitech.com/courses" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                    <a href="courses.php" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
                 </div>
             </div>
             
@@ -109,51 +120,49 @@
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Water Analysis</h3>
                     <p class="text-gray-600 mb-4">Water quality testing and management for aquaculture</p>
-                    <a href="https://neelkranti.webfiredegitech.com/courses" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                    <a href="courses.php" class="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
                 </div>
             </div>
         </div>
         
         <div class="text-center mt-12">
-            <a href="https://neelkranti.webfiredegitech.com/courses" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+            <a href="courses.php" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
                 View All Courses
             </a>
         </div>
     </div>
 </section>
 
-<!-- Latest News & Notices -->
+<!-- Latest News & Notices    X-->
+<!-- photos -->
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <!-- Latest News -->
-            <div>
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Latest News</h2>
-                <div class="space-y-6">
-                                                                <div class="bg-white p-6 rounded-lg shadow">
-                            <p class="text-gray-600">No news available at the moment.</p>
-                        </div>
-                                    </div>
-                <div class="mt-6">
-                    <a href="https://neelkranti.webfiredegitech.com/notices/news" class="text-blue-600 hover:text-blue-800 font-medium">View All News →</a>
-                </div>
+      <!--  <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Gallery</h2> -->
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Image 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+                <img src="images/homeimage1.jpg" alt="Image 1" class="w-full h-48 object-cover">
             </div>
             
-            <!-- Important Notices -->
-            <div>
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">Important Notices</h2>
-                <div class="space-y-6">
-                                                                <div class="bg-white p-6 rounded-lg shadow">
-                            <p class="text-gray-600">No notices available at the moment.</p>
-                        </div>
-                                    </div>
-                <div class="mt-6">
-                    <a href="https://neelkranti.webfiredegitech.com/notices" class="text-blue-600 hover:text-blue-800 font-medium">View All Notices →</a>
-                </div>
+            <!-- Image 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+                <img src="images/homeimage2.jpg" alt="Image 2" class="w-full h-48 object-cover">
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+                <img src="images/homeimage3.jpg" alt="Image 3" class="w-full h-48 object-cover">
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+                <img src="images/homeimage4.jpg" alt="Image 4" class="w-full h-48 object-cover">
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Upcoming Events -->
 <section class="py-20 bg-white">
@@ -165,13 +174,56 @@
             </p>
         </div>
         
-                            <div class="text-center py-12">
-                <i class="fas fa-calendar text-gray-400 text-6xl mb-4"></i>
-                <p class="text-gray-600">No upcoming events at the moment. Check back soon!</p>
-            </div>
+            <?php
+            $events = $conn->query("
+                SELECT title, event_date, description, photo, image 
+                FROM events 
+                ORDER BY created_at DESC 
+                LIMIT 3
+            ");
+
+            if ($events && $events->num_rows > 0):
+            ?>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <?php while ($event = $events->fetch_assoc()): ?>
+                        <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                            
+                            <?php if (!empty($event['photo']) || !empty($event['image'])): ?>
+                                <img 
+                                    src="uploads/events/<?=
+                                        !empty($event['photo']) ? $event['photo'] : $event['image']
+                                    ?>" 
+                                    alt="<?= htmlspecialchars($event['title']) ?>"
+                                    class="w-full h-48 object-cover"
+                                >
+                            <?php endif; ?>
+
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                    <?= htmlspecialchars($event['title']) ?>
+                                </h3>
+
+                                <p class="text-sm text-blue-600 mb-2">
+                                    <?= date('F d, Y', strtotime($event['event_date'])) ?>
+                                </p>
+
+                                <p class="text-gray-600 text-sm">
+                                    <?= substr(strip_tags($event['description']), 0, 100) ?>...
+                                </p>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php else: ?>
+                <div class="text-center py-12">
+                    <i class="fas fa-calendar text-gray-400 text-6xl mb-4"></i>
+                    <p class="text-gray-600">No upcoming events at the moment. Check back soon!</p>
+                </div>
+            <?php endif; ?>
+
                 
         <div class="text-center mt-12">
-            <a href="https://neelkranti.webfiredegitech.com/events" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+            <a href="events.php" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
                 View All Events
             </a>
         </div>
@@ -188,13 +240,37 @@
             </p>
         </div>
         
-                            <div class="text-center py-12">
-                <i class="fas fa-images text-gray-400 text-6xl mb-4"></i>
-                <p class="text-gray-600">Gallery images will be available soon.</p>
-            </div>
+            <?php
+            $gallery = $conn->query("
+                SELECT title, photo 
+                FROM gallery 
+                ORDER BY created_at DESC 
+                LIMIT 4
+            ");
+
+            if ($gallery && $gallery->num_rows > 0):
+            ?>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <?php while ($img = $gallery->fetch_assoc()): ?>
+                        <div class="rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+                            <img 
+                                src="uploads/gallery/<?= $img['photo'] ?>" 
+                                alt="<?= htmlspecialchars($img['title']) ?>"
+                                class="w-full h-48 object-cover"
+                            >
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php else: ?>
+                <div class="text-center py-12">
+                    <i class="fas fa-images text-gray-400 text-6xl mb-4"></i>
+                    <p class="text-gray-600">Gallery images will be available soon.</p>
+                </div>
+            <?php endif; ?>
+
                 
         <div class="text-center mt-12">
-            <a href="https://neelkranti.webfiredegitech.com/gallery" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+            <a href="gallery.php" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
                 View Full Gallery
             </a>
         </div>

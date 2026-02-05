@@ -7,7 +7,7 @@
                 <!-- Organization Info -->
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center mb-4">
-                        <img src="https://neelkranti.webfiredegitech.com/images/logo-white.png" alt="Neelkranti Foundation" class="h-10 w-auto mr-3">
+                     <!--   <img src="https://neelkranti.webfiredegitech.com/images/logo-white.png" alt="Neelkranti Foundation" class="h-10 w-auto mr-3">-->
                         <span class="text-xl font-bold">Neelkranti Foundation</span>
                     </div>
                     <p class="text-gray-300 mb-4">
@@ -37,12 +37,12 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="https://neelkranti.webfiredegitech.com/about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="https://neelkranti.webfiredegitech.com/membership/apply" class="text-gray-300 hover:text-white transition-colors">Apply for Membership</a></li>
-                        <li><a href="https://neelkranti.webfiredegitech.com/courses" class="text-gray-300 hover:text-white transition-colors">Courses</a></li>
-                        <li><a href="https://neelkranti.webfiredegitech.com/donate" class="text-gray-300 hover:text-white transition-colors">Donate</a></li>
-                        <li><a href="https://neelkranti.webfiredegitech.com/gallery" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="https://neelkranti.webfiredegitech.com/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="about.php" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="membership/apply" class="text-gray-300 hover:text-white transition-colors">Apply for Membership</a></li>
+                        <li><a href="courses.php" class="text-gray-300 hover:text-white transition-colors">Courses</a></li>
+                        <li><a href="donate" class="text-gray-300 hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="gallery.php" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.php" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -52,15 +52,15 @@
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2"></i>
-                            123 NGO Street, Sector 15, New Delhi - 110001
+                            Raviraj Park, Parbhani, Maharashtra  - 431491
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
-                            +91 12345 67890
+                            +91 9284476047
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            info@neelkrantifoundation.org.in
+                            ahirrao.sunil@gmail.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-globe mr-2"></i>
