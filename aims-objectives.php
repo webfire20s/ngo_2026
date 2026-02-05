@@ -250,3 +250,5 @@ include 'includes/header.php';
     </div>
 </section>
     </main>
+
+<?php include 'includes/footer.php'; ?>
