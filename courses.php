@@ -61,12 +61,6 @@ $courses = $conn->query("SELECT * FROM courses WHERE status = 1 ORDER BY id DESC
 
                 <div class="p-6">
                     <div class="flex items-center mb-3">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                            <?= htmlspecialchars($course['category']) ?>
-                        </span>
-                        <span class="text-sm text-gray-500 ml-2">
-                            <?= htmlspecialchars($course['duration']) ?>
-                        </span>
                     </div>
 
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">
@@ -78,12 +72,14 @@ $courses = $conn->query("SELECT * FROM courses WHERE status = 1 ORDER BY id DESC
                     </p>
 
                     <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold text-green-600">
-                        <?= htmlspecialchars($course['price']) ?>
-                    </span>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+                    
+                    <button 
+                        type="button"
+                        onclick="window.location.href='contact.php'"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
                         Enroll Now
                     </button>
+
                 </div>
             </div>
         </div>
