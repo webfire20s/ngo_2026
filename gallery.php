@@ -25,7 +25,7 @@ endif;
 while ($row = $res->fetch_assoc()):
 ?>
     <div class="bg-gray-50 rounded-lg shadow overflow-hidden">
-        <img src="uploads/<?= $row['photo'] ?>"
+        <img src="uploads/gallery/<?= $row['photo'] ?>"
              class="w-full h-64 object-cover">
         <div class="p-4 text-center font-semibold">
             <?= htmlspecialchars($row['title']) ?>

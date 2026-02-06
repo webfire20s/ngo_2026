@@ -7,14 +7,21 @@ if (isset($_POST['submit'])) {
     $description = $_POST['description'];
 
     $photo = '';
+
     if (!empty($_FILES['photo']['name'])) {
-        $photo = time() . '_' . $_FILES['photo']['name'];
-<<<<<<< HEAD
-        move_uploaded_file($_FILES['photo']['tmp_name'], "../uploads/gallery/" . $photo);
-=======
-        move_uploaded_file($_FILES['photo']['tmp_name'], "../uploads/gallery" . $photo);
->>>>>>> 12114e4 (added activities with photos)
+
+        // Ensure directory exists
+        if (!is_dir("../uploads/gallery")) {
+            mkdir("../uploads/gallery", 0777, true);
+        }
+
+        $photo = time() . '_' . basename($_FILES['photo']['name']);
+        move_uploaded_file(
+            $_FILES['photo']['tmp_name'],
+            "../uploads/gallery/" . $photo
+        );
     }
+
 
     $stmt = $conn->prepare(
         "INSERT INTO gallery (title, description, photo) VALUES (?, ?, ?)"
