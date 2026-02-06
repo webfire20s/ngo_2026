@@ -114,56 +114,8 @@ function e($value, $fallback = '') {
     </div>
 </section>
 
-<section class="py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Our Leadership Team</h2>
-            <div class="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
-            <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">Meet the visionary minds driving our mission forward.</p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <?php while ($row = $team->fetch_assoc()): ?>
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 transform hover:-translate-y-2">
-                    <div class="relative overflow-hidden h-80">
-                        <?php if ($row['image']): ?>
-                            <img src="uploads/team/<?= $row['image'] ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="<?= htmlspecialchars($row['name']) ?>">
-                        <?php endif; ?>
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent opacity-60"></div>
-                        <div class="absolute bottom-6 left-6">
-                            <h3 class="text-2xl font-bold text-white"><?= htmlspecialchars($row['name']) ?></h3>
-                            <p class="text-blue-300 font-medium uppercase tracking-widest text-xs"><?= htmlspecialchars($row['designation']) ?></p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <p class="text-gray-600 leading-relaxed italic text-sm">
-                            "<?= nl2br(htmlspecialchars($row['bio'])) ?>"
-                        </p>
-                    </div>
-                </div>
-            <?php endwhile; ?>
-        </div>
-    </div>
-</section>
 
-<section class="py-24 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl font-bold text-gray-400 uppercase tracking-widest">Trusted by Organizations</h2>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-            <?php while ($row = $partners->fetch_assoc()): ?>
-                <div class="p-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex justify-center">
-                    <?php if ($row['logo']): ?>
-                        <img src="uploads/partners/<?= $row['logo'] ?>" class="max-h-12 w-auto object-contain" alt="<?= htmlspecialchars($row['partner_name']) ?>">
-                    <?php else: ?>
-                        <span class="text-gray-800 font-bold"><?= htmlspecialchars($row['partner_name']) ?></span>
-                    <?php endif; ?>
-                </div>
-            <?php endwhile; ?>
-        </div>
-    </div>
-</section>
 
 <section class="py-20 gradient-bg text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 text-center relative z-10">

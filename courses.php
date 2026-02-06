@@ -163,10 +163,10 @@ $courses = $conn->query("SELECT * FROM courses WHERE status = 1 ORDER BY id DESC
             Join our training programs and gain the skills needed for a successful career in fisheries and allied sectors.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://neelkranti.webfiredegitech.com/membership/apply" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-colors">
+            <a href="membership_apply.php" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-colors">
                 Apply for Admission
             </a>
-            <a href="https://neelkranti.webfiredegitech.com/contact" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold transition-colors">
+            <a href="contact.php" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold transition-colors">
                 Get More Information
             </a>
         </div>

@@ -38,6 +38,14 @@ include 'includes/auth.php';
                         <div class="col-md-3 stretch-card grid-margin">
                             <div class="card bg-danger text-white text-center">
                                 <div class="card-body">
+                                    <h4 class="card-title">Donations</h4>
+                                    <a href="donations.php" class="btn btn-light mt-2">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-info text-white text-center">
+                                <div class="card-body">
                                     <h4 class="card-title">Manage About</h4>
                                     <a href="manage-about.php" class="btn btn-light mt-2">Go</a>
                                 </div>
@@ -63,7 +71,7 @@ include 'includes/auth.php';
                         </div>
 
                         <div class="col-md-3 stretch-card grid-margin">
-                            <div class="card bg-warning text-white text-center">
+                            <div class="card bg-info text-white text-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Manage Research</h4>
                                     <a href="manage-research.php" class="btn btn-light mt-2">Go</a>
@@ -72,7 +80,7 @@ include 'includes/auth.php';
                         </div>
 
                         <div class="col-md-3 stretch-card grid-margin">
-                            <div class="card bg-info text-white text-center">
+                            <div class="card bg-warning text-white text-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Contact Messages</h4>
                                     <a href="contact-messages.php" class="btn btn-light mt-2">View</a>
@@ -90,7 +98,7 @@ include 'includes/auth.php';
                         </div>
 
                         <div class="col-md-3 stretch-card grid-margin">
-                            <div class="card bg-warning text-white text-center">
+                            <div class="card bg-primary text-white text-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Memberships</h4>
                                     <a href="memberships.php" class="btn btn-light mt-2">View</a>
@@ -99,7 +107,7 @@ include 'includes/auth.php';
                         </div>
 
                         <div class="col-md-3 stretch-card grid-margin">
-                            <div class="card bg-primary text-white text-center">
+                            <div class="card bg-warning text-white text-center">
                                 <div class="card-body">
                                     <h4 class="card-title">Manage Events</h4>
                                     <a href="manage-events.php" class="btn btn-light mt-2">View</a>

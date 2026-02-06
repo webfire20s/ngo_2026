@@ -26,7 +26,7 @@ include 'includes/db.php';
                         <a href="membership_apply.php" class="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-600/30 hover:bg-blue-700 transition-all text-center">
                             Get Started Today
                         </a>
-                        <a href="donate" class="px-8 py-4 bg-white/10 text-white font-bold rounded-xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all text-center">
+                        <a href="donation_apply.php" class="px-8 py-4 bg-white/10 text-white font-bold rounded-xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all text-center">
                             Support Our Cause
                         </a>
                     </div>

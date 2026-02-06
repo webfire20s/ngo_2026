@@ -37,7 +37,7 @@
                     <ul class="space-y-4">
                         <li><a href="membership_apply.php" class="hover:text-blue-400 transition-colors">Join Community</a></li>
                         <li><a href="courses.php" class="hover:text-blue-400 transition-colors">Training Courses</a></li>
-                        <li><a href="donate" class="hover:text-blue-400 transition-colors">Donation Portal</a></li>
+                        <li><a href="donation_apply.php" class="hover:text-blue-400 transition-colors">Donation Portal</a></li>
                         <li><a href="gallery.php" class="hover:text-blue-400 transition-colors">Gallery Center</a></li>
                         <li><a href="notices.php" class="hover:text-blue-400 transition-colors">Latest Notices</a></li>
                     </ul>

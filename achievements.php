@@ -79,7 +79,7 @@ include 'includes/header.php';
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold mb-6">Be Part of Our Success Story</h2>
             <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <a href="https://neelkranti.webfiredegitech.com/membership/apply" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition-all">Join Our Community</a>
+                <a href="membership_apply.php" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition-all">Join Our Community</a>
                 <a href="https://neelkranti.webfiredegitech.com/donate" class="bg-green-500 text-white px-10 py-4 rounded-full font-bold hover:bg-green-600 transition-all">Support Mission</a>
             </div>
         </div>

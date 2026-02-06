@@ -153,11 +153,11 @@ $products = $conn->query("SELECT * FROM products WHERE status = 1 ORDER BY id DE
                 Get fresh, quality fish products delivered to your doorstep
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                <a href="tel:+911234567890" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors flex items-center justify-center">
+                <a href="tel:+919284476047" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors flex items-center justify-center">
                     <i class="fas fa-phone mr-2"></i>
-                    Call Us: +91 12345 67890
+                    Call Us: +91 9284476047
                 </a>
-                <a href="https://wa.me/911234567890?text=Hello%20Neelkranti%20Foundation%2C%20I%20would%20like%20to%20order%20fish%20products" 
+                <a href="https://wa.me/919284476047?text=Hello%20Neelkranti%20Foundation%2C%20I%20would%20like%20to%20order%20fish%20products" 
                    class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition-colors flex items-center justify-center"
                    target="_blank">
                     <i class="fab fa-whatsapp mr-2"></i>
