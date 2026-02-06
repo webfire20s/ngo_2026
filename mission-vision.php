@@ -37,7 +37,7 @@ include 'includes/header.php';
                 </div>
                 <div class="lg:w-1/2 relative">
                     <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-                    <img src="https://neelkranti.webfiredegitech.com/images/mission-1.jpg" class="rounded-[3rem] shadow-2xl w-full object-cover z-10 relative transform rotate-2" alt="Mission">
+                    <img src="images/mission.png" class="rounded-[3rem] shadow-2xl w-full object-cover z-10 relative transform rotate-2" alt="Mission">
                 </div>
             </div>
 
@@ -57,7 +57,7 @@ include 'includes/header.php';
                 </div>
                 <div class="lg:w-1/2 relative">
                     <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-                    <img src="https://neelkranti.webfiredegitech.com/images/vision-1.jpg" class="rounded-[3rem] shadow-2xl w-full object-cover z-10 relative transform -rotate-2" alt="Vision">
+                    <img src="images/vision.png" class="rounded-[3rem] shadow-2xl w-full object-cover z-10 relative transform -rotate-2" alt="Vision">
                 </div>
             </div>
 

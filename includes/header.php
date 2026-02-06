@@ -122,42 +122,34 @@
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="index.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Home</a>
                     
                     <!-- About Dropdown -->
                     <div class="relative group">
-                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                        <button class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors flex items-center">
                             About Us <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="about.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About Us</a>
-                            <a href="aims-objectives.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Aims & Objectives</a>
-                            <a href="mission-vision.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mission & Vision</a>
-                            <a href="achievements.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Achievements</a>
+                            <a href="about.php" class="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">About Us</a>
+                            <a href="aims-objectives.php" class="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Aims & Objectives</a>
+                            <a href="mission-vision.php" class="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Mission & Vision</a>
+                            <a href="achievements.php" class="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100">Achievements</a>
                         </div>
                     </div>
 
-                      <!-- Member Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
-                            Members <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                        </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="members.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Members</a>
-                            <a href="membership_apply.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Apply Membership</a>
-                            <a href="donation_apply.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Donate</a>
-                        </div>
-                    </div>  
                     
-                    <a href="activities.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Activities</a>
-                    <a href="courses.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Courses</a>
-                    <a href="research.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Research</a>
-                    <a href="products.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Products</a>
-                    <a href="events.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Events</a>
-                    <a href="gallery.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
-                    <a href="notices.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Notices</a>
-                    <a href="contact.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    <a href="members.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Members</a>
+                    <a href="membership_apply.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Apply Membership</a>
+                    <a href="donation_apply.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Donate Now</a>
+                    <a href="activities.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Activities</a>
+                    <a href="courses.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Courses</a>
+                    <a href="research.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Research</a>
+                    <a href="products.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Products</a>
+                    <a href="events.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Events</a>
+                    <a href="gallery.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Gallery</a>
+                    <a href="notices.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Notices</a>
+                    <a href="contact.php" class="text-gray-700 hover:text-blue-600 px-2 py-2 rounded-md text-xs font-medium transition-colors">Contact</a>
                     
                     <!-- Language Switcher -->
                                     </div>
@@ -176,7 +168,12 @@
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="index.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Home</a>
                 <a href="about.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">About Us</a>
-                <a href="member.phps" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Members</a>
+                <a href="aims-objectives.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Aims & Objectives</a>
+                <a href="mission-vision.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Mission & Vision</a>
+                <a href="achievements.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Achievements</a>
+                <a href="members.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Members</a>
+                <a href="membership_apply.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Apply Membership</a>
+                <a href="donation_apply.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Donate Now</a>
                 <a href="activities.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Activities</a>
                 <a href="courses.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Courses</a>
                 <a href="research.php" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Research</a>
