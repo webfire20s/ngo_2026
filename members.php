@@ -23,7 +23,7 @@ include 'includes/db.php';
                 while ($row = $result->fetch_assoc()):
             ?>
                 <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden text-center">
-                    <img src="uploads/<?= htmlspecialchars($row['photo']); ?>"
+                    <img src="uploads/members/<?= htmlspecialchars($row['photo']); ?>"
                          class="w-full h-64 object-cover"
                          alt="<?= htmlspecialchars($row['name']); ?>">
 
