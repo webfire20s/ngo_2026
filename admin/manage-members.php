@@ -1,6 +1,23 @@
 <?php
-include 'includes/auth.php';
+session_start();
 include '../includes/db.php';
+
+/* ADD MEMBER */
+if (isset($_POST['add_member'])) {
+    $name = $_POST['name'];
+    $designation = $_POST['designation'];
+
+    $photo = $_FILES['photo']['name'];
+    $tmp  = $_FILES['photo']['tmp_name'];
+
+    move_uploaded_file($tmp, "../uploads/members/" . $photo);
+
+    $stmt = $conn->prepare(
+        "INSERT INTO members (name, designation, photo) VALUES (?, ?, ?)"
+    );
+    $stmt->bind_param("sss", $name, $designation, $photo);
+    $stmt->execute();
+}
 
 /* DELETE MEMBER */
 if (isset($_GET['delete'])) {
@@ -20,7 +37,12 @@ if (isset($_GET['delete'])) {
     header("Location: manage-members.php");
     exit;
 }
+
+
+
+$members = $conn->query("SELECT * FROM members ORDER BY id DESC");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,89 +50,131 @@ if (isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <title>Manage Members</title>
 
-    <!-- PURPLE THEME CSS -->
+    <!-- REQUIRED CSS -->
     <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
 
+<body>
 <div class="container-scroller">
 
+    <!-- SIDEBAR -->
     <?php include '../partials/sidebar.php'; ?>
 
     <div class="container-fluid page-body-wrapper">
 
+        <!-- NAVBAR -->
         <?php include '../partials/navbar.php'; ?>
 
+        <!-- MAIN PANEL -->
         <div class="main-panel">
             <div class="content-wrapper">
 
+                <!-- PAGE TITLE -->
                 <div class="row mb-4">
-                    <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <div class="col-md-12">
                         <h3 class="font-weight-bold">Manage Members</h3>
-                        <a href="add-member.php" class="btn btn-primary">+ Add Member</a>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-body">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Add Member</h4>
 
-                                <table class="table table-bordered table-hover">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Designation</th>
-                                            <th>Photo</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                    $res = $conn->query("SELECT * FROM members ORDER BY id DESC");
-                                    $i = 1;
-                                    while ($row = $res->fetch_assoc()):
-                                    ?>
-                                        <tr>
-                                            <td><?= $i++ ?></td>
-                                            <td><?= htmlspecialchars($row['name']) ?></td>
-                                            <td><?= htmlspecialchars($row['designation']) ?></td>
-                                            <td>
-                                                <?php if ($row['photo']) { ?>
-                                                    <img src="../uploads/members/<?= $row['photo'] ?>" width="70">
-                                                <?php } ?>
-                                            </td>
-                                            <td>
-                                                <a href="edit-member.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="row">
 
-                                                <a href="manage-members.php?delete=<?= $row['id'] ?>"
-                                                   onclick="return confirm('Delete this member?')"
-                                                   class="btn btn-sm btn-danger">
-                                                    Delete
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    <?php endwhile; ?>
-                                    </tbody>
-                                </table>
+                                <div class="col-md-4">
+                                    <input type="text" name="name" class="form-control" placeholder="Member Name" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input type="text" name="designation" class="form-control" placeholder="Designation" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input type="file" name="photo" class="form-control" required>
+                                </div>
 
                             </div>
+
+                            <button type="submit" name="add_member" class="btn btn-primary mt-3">
+                                Add Member
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- MEMBERS TABLE -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Designation</th>
+                                        <th>Photo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php
+                                $result = $conn->query("SELECT * FROM members ORDER BY id DESC");
+                                if ($result->num_rows > 0):
+                                    $i = 1;
+                                    while ($row = $result->fetch_assoc()):
+                                ?>
+                                    <tr>
+                                        <td><?= $i++; ?></td>
+                                        <td><?= htmlspecialchars($row['name']); ?></td>
+                                        <td><?= htmlspecialchars($row['designation']); ?></td>
+                                        <td>
+                                            <img src="../uploads/<?= $row['photo']; ?>" width="60">
+                                        </td>
+                                    </tr>
+                                <?php
+                                    endwhile;
+                                else:
+                                ?>
+                                    <tr>
+                                        <td colspan="4" class="text-center text-muted">
+                                            No members found
+                                        </td>
+                                    </tr>
+                                <?php endif; ?>
+
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <?php include '../partials/footer.php'; ?>
+            <td>
+                <a href="manage-members.php?delete=<?php echo $row['id']; ?>"
+                    onclick="return confirm('Delete this member?')"
+                    class="btn btn-danger btn-sm">
+                    Delete
+                </a>
 
+
+            </td>
+
+
+            <!-- FOOTER -->
+            <?php include '../partials/footer.php'; ?>
         </div>
     </div>
 </div>
 
-<!-- PURPLE JS -->
+    <!-- REQUIRED JS -->
 <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
 <script src="../assets/js/off-canvas.js"></script>
 <script src="../assets/js/template.js"></script>
