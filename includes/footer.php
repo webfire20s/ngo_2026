@@ -1,80 +1,75 @@
 
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Organization Info -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                     <!--   <img src="https://neelkranti.webfiredegitech.com/images/logo-white.png" alt="Neelkranti Foundation" class="h-10 w-auto mr-3">-->
-                        <span class="text-xl font-bold">Neelkranti Foundation</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        Working towards social welfare through fish culture, research, and community development. 
-                        Empowering communities with sustainable livelihood solutions.
+    <!-- NEW Modern Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-6">Neelkranti <span class="text-blue-500">Foundation</span></h3>
+                    <p class="leading-relaxed mb-8">
+                        Revolutionizing social welfare and aquaculture through sustainable practices and dedicated community research. 
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
-                <!-- Quick Links -->
+
+                <!-- Useful Links -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.php" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="membership_apply.php" class="text-gray-300 hover:text-white transition-colors">Apply for Membership</a></li>
-                        <li><a href="courses.php" class="text-gray-300 hover:text-white transition-colors">Courses</a></li>
-                        <li><a href="donate" class="text-gray-300 hover:text-white transition-colors">Donate</a></li>
-                        <li><a href="gallery.php" class="text-gray-300 hover:text-white transition-colors">Gallery</a></li>
-                        <li><a href="contact.php" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Organization</h4>
+                    <ul class="space-y-4">
+                        <li><a href="about.php" class="hover:text-blue-400 transition-colors">About History</a></li>
+                        <li><a href="aims-objectives.php" class="hover:text-blue-400 transition-colors">Aims & Goals</a></li>
+                        <li><a href="activities.php" class="hover:text-blue-400 transition-colors">Ongoing Activities</a></li>
+                        <li><a href="research.php" class="hover:text-blue-400 transition-colors">Research Wing</a></li>
+                        <li><a href="events.php" class="hover:text-blue-400 transition-colors">Upcoming Events</a></li>
                     </ul>
                 </div>
-                
-                <!-- Contact Info -->
+
+                <!-- Support Links -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            Raviraj Park, Parbhani, Maharashtra  - 431491
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Engagement</h4>
+                    <ul class="space-y-4">
+                        <li><a href="membership_apply.php" class="hover:text-blue-400 transition-colors">Join Community</a></li>
+                        <li><a href="courses.php" class="hover:text-blue-400 transition-colors">Training Courses</a></li>
+                        <li><a href="donate" class="hover:text-blue-400 transition-colors">Donation Portal</a></li>
+                        <li><a href="gallery.php" class="hover:text-blue-400 transition-colors">Gallery Center</a></li>
+                        <li><a href="notices.php" class="hover:text-blue-400 transition-colors">Latest Notices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Reach Out -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Get in Touch</h4>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1"></i>
+                            <span>Raviraj Park, Parbhani,<br>Maharashtra - 431491</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2"></i>
-                            +91 9284476047
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-blue-500"></i>
+                            <span>+91 9284476047</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            ahirrao.sunil@gmail.com
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-globe mr-2"></i>
-                            www.neelkrantifoundation.org.in
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span class="break-all text-sm">ahirrao.sunil@gmail.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2026 Neelkranti Foundation. All rights reserved.</p>
-                <div class="mt-2 space-x-4">
-                    <a href="https://neelkranti.webfiredegitech.com/terms" class="hover:text-white transition-colors">Terms & Conditions</a>
-                    <a href="https://neelkranti.webfiredegitech.com/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>&copy; 2026 <span class="text-white font-bold">Neelkranti Foundation</span>. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white">Terms of Use</a>
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Cookies</a>
                 </div>
             </div>
         </div>
@@ -82,14 +77,14 @@
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/919284476047?text=Hello%20Neelkranti%20Foundation%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
-       class="whatsapp-float bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors float-animation" 
+       class="whatsapp-float bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95" 
        target="_blank">
         <i class="fab fa-whatsapp text-xl"></i>
     </a>
 
     <!-- Call Button -->
     <a href="tel:+919284476047" 
-       class="call-float bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors float-animation">
+       class="call-float bg-blue-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95">
         <i class="fas fa-phone text-xl"></i>
     </a>
 
