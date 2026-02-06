@@ -137,8 +137,19 @@
                             <a href="achievements.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Achievements</a>
                         </div>
                     </div>
+
+                      <!-- Member Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                            Members <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="members.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Members</a>
+                            <a href="membership_apply.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Apply Membership</a>
+                            <a href="donation_apply.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Donate</a>
+                        </div>
+                    </div>  
                     
-                    <a href="members.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Members</a>
                     <a href="activities.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Activities</a>
                     <a href="courses.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Courses</a>
                     <a href="research.php" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Research</a>
