@@ -84,12 +84,7 @@ if (isset($_POST['save_about'])) {
                         <a href="manage-about.php" class="btn btn-primary mr-2">
                             About Content
                         </a>
-                        <a href="manage-team.php" class="btn btn-outline-primary mr-2">
-                            Team Members
-                        </a>
-                        <a href="manage-partners.php" class="btn btn-outline-primary">
-                            Partners
-                        </a>
+                        
                     </div>
                 </div>
 
