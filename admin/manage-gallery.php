@@ -89,7 +89,7 @@ if (isset($_GET['delete'])) {
                                             <td><?= htmlspecialchars($row['title']) ?></td>
                                             <td>
                                                 <?php if (!empty($row['image'])) { ?>
-                                                    <img src="../uploads/<?= htmlspecialchars($row['photo']) ?>" width="80">
+                                                    <img src="../uploads/gallery/<?= htmlspecialchars($row['photo']) ?>" width="80">
                                                 <?php } ?>
                                             </td>
                                             <td>
