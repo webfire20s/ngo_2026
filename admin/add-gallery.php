@@ -45,10 +45,10 @@ if (isset($_POST['submit'])) {
 <body>
 
 <div class="container-scroller">
-<?php include '../partials/sidebar.php'; ?>
+<?php include '../partials/navbar.php'; ?>
 
 <div class="container-fluid page-body-wrapper">
-<?php include '../partials/navbar.php'; ?>
+<?php include '../partials/sidebar.php'; ?>
 
 <div class="main-panel">
 <div class="content-wrapper">
