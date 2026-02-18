@@ -73,11 +73,11 @@ include 'includes/header.php';
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-2">Full Name</label>
-                                <input type="text" name="name" required placeholder="John Doe" class="donate-input">
+                                <input type="text" name="name" required placeholder="Your Name" class="donate-input">
                             </div>
                             <div class="space-y-2">
                                 <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-2">Email Address</label>
-                                <input type="email" name="email" required placeholder="john@example.com" class="donate-input">
+                                <input type="email" name="email" required placeholder="Your E-mail Address" class="donate-input">
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@ include 'includes/header.php';
 
                         <div class="space-y-2">
                             <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-2">Notes (Optional)</label>
-                            <textarea name="message" rows="3" placeholder="Additional details..." class="donate-input"></textarea>
+                            <textarea name="message" rows="3" placeholder="Notes..." class="donate-input"></textarea>
                         </div>
 
                         <div class="pt-4">

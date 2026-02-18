@@ -3,6 +3,12 @@ include 'includes/header.php';
 include 'includes/db.php';
 ?>
 
+<style>
+    .pillar-card:hover i {
+        transform: translateY(-5px) scale(1.1);
+    }
+</style>
+
     <main class="bg-slate-50">
         <section class="relative min-h-[95vh] flex items-center overflow-hidden bg-slate-950">
             <div class="absolute inset-0 z-0">
@@ -157,6 +163,109 @@ include 'includes/db.php';
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tighter">Upcoming Activities</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-[2rem] bg-blue-50 border border-blue-100 flex gap-6 items-start hover-scale reveal" style="transition-delay: 0.1s">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg"><i class="fas fa-calendar"></i></div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">Fish Farming Workshop</h3>
+                            <p class="text-xs font-bold text-blue-600 mb-2 uppercase">April 15-20, 2024</p>
+                            <p class="text-sm text-slate-500">5-day intensive workshop on modern techniques.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 rounded-[2rem] bg-emerald-50 border border-emerald-100 flex gap-6 items-start hover-scale reveal" style="transition-delay: 0.2s">
+                        <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg"><i class="fas fa-calendar"></i></div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">Health Camp</h3>
+                            <p class="text-xs font-bold text-emerald-600 mb-2 uppercase">April 25, 2024</p>
+                            <p class="text-sm text-slate-500">Free health check-up for farming communities.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 rounded-[2rem] bg-purple-50 border border-purple-100 flex gap-6 items-start hover-scale reveal" style="transition-delay: 0.3s">
+                        <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg"><i class="fas fa-calendar"></i></div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">Research Seminar</h3>
+                            <p class="text-xs font-bold text-purple-600 mb-2 uppercase">May 5, 2024</p>
+                            <p class="text-sm text-slate-500">National seminar on recent advances.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-24 bg-white border-t border-slate-100 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter mb-4">Why Train With Us?</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">We provide the ecosystem required to turn learning into a sustainable career.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="group reveal" style="transition-delay: 0.1s">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-certificate text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Certified Training</h3>
+                        <p class="text-slate-500 leading-relaxed">Government recognized certificates upon successful completion of curriculum.</p>
+                    </div>
+                    
+                    <div class="group reveal" style="transition-delay: 0.2s">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-hands-helping text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Practical Exposure</h3>
+                        <p class="text-slate-500 leading-relaxed">Hands-on training with real-world projects and direct field implementation visits.</p>
+                    </div>
+                    
+                    <div class="group reveal" style="transition-delay: 0.3s">
+                        <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-briefcase text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Job Assistance</h3>
+                        <p class="text-slate-500 leading-relaxed">Placement support and business incubation guidance for budding entrepreneurs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-20 animate-on-scroll" data-animate="animate__fadeInUp">
+                    <span class="text-blue-600 font-bold uppercase tracking-widest text-xs">The Neelkranti Ethos</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 tracking-tight">Our Core Pillars</h2>
+                    <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-10">
+                    <?php 
+                    $vals = [
+                        ['icon' => 'fa-handshake', 'col' => 'blue', 'label' => 'Integrity', 'delay' => '0.1s'],
+                        ['icon' => 'fa-leaf', 'col' => 'emerald', 'label' => 'Nature', 'delay' => '0.2s'],
+                        ['icon' => 'fa-users', 'col' => 'violet', 'label' => 'Unity', 'delay' => '0.3s'],
+                        ['icon' => 'fa-lightbulb', 'col' => 'orange', 'label' => 'Innovation', 'delay' => '0.4s'],
+                        ['icon' => 'fa-heart', 'col' => 'rose', 'label' => 'Empathy', 'delay' => '0.5s'],
+                        ['icon' => 'fa-trophy', 'col' => 'indigo', 'label' => 'Quality', 'delay' => '0.6s']
+                    ];
+                    foreach ($vals as $v): ?>
+                    <div class="text-center group pillar-card animate-on-scroll" 
+                        data-animate="animate__zoomIn" 
+                        style="animation-delay: <?= $v['delay'] ?>;">
+                        <div class="w-24 h-24 mx-auto bg-slate-50 rounded-[2rem] flex items-center justify-center mb-6 border border-slate-100 group-hover:bg-<?= $v['col'] ?>-600 transition-all duration-500 shadow-sm group-hover:shadow-xl group-hover:shadow-<?= $v['col'] ?>-200">
+                            <i class="fas <?= $v['icon'] ?> text-<?= $v['col'] ?>-600 text-3xl group-hover:text-white transition-all duration-500"></i>
+                        </div>
+                        <span class="font-black text-slate-900 uppercase tracking-widest text-[10px]"><?= $v['label'] ?></span>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>

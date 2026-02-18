@@ -115,11 +115,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-slate-700 font-bold mb-2 ml-2 text-sm">Full Name</label>
-                                <input type="text" name="full_name" required placeholder="e.g. John Doe" class="form-input">
+                                <input type="text" name="full_name" required placeholder="Your Name" class="form-input">
                             </div>
                             <div>
                                 <label class="block text-slate-700 font-bold mb-2 ml-2 text-sm">Email Address</label>
-                                <input type="email" name="email" required placeholder="john@example.com" class="form-input">
+                                <input type="email" name="email" required placeholder="Your E-mail Address" class="form-input">
                             </div>
                         </div>
 

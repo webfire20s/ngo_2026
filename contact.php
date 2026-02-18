@@ -68,17 +68,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-xs font-black uppercase tracking-widest text-slate-400 mb-3 ml-2">Full Name</label>
-                                    <input type="text" name="name" placeholder="John Doe" required class="contact-input">
+                                    <input type="text" name="name" placeholder="Your Name" required class="contact-input">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-black uppercase tracking-widest text-slate-400 mb-3 ml-2">Email Address</label>
-                                    <input type="email" name="email" placeholder="john@example.com" required class="contact-input">
+                                    <input type="email" name="email" placeholder="Your E-mail Address" required class="contact-input">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-xs font-black uppercase tracking-widest text-slate-400 mb-3 ml-2">How can we help?</label>
-                                <textarea name="message" rows="6" placeholder="Tell us about your inquiry..." required class="contact-input resize-none"></textarea>
+                                <textarea name="message" rows="6" placeholder="How can we help you..." required class="contact-input resize-none"></textarea>
                             </div>
 
                             <button type="submit" class="w-full md:w-auto bg-slate-900 text-white px-12 py-5 rounded-2xl font-black hover:bg-blue-600 transition-all duration-300 shadow-xl shadow-slate-200 flex items-center justify-center gap-3 group">
