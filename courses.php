@@ -79,17 +79,26 @@ $courses = $conn->query("SELECT * FROM courses WHERE status = 1 ORDER BY id DESC
                          data-category="<?= strtolower($course['category']) ?>"
                          style="transition-delay: <?= $delay ?>s">
                         
-                        <div class="h-56 bg-gradient-to-br from-blue-600 to-indigo-700 flex flex-col items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 opacity-10">
-                                <svg width="100%" height="100%"><pattern id="pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="white"/></pattern><rect width="100%" height="100%" fill="url(#pattern)"/></svg>
-                            </div>
-                            <i class="fas fa-book-open text-white/20 text-8xl absolute -right-4 -bottom-4"></i>
-                            <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center mb-4 border border-white/20 relative z-10">
-                                <i class="fas fa-graduation-cap text-white text-3xl"></i>
-                            </div>
-                            <span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full border border-white/20 relative z-10">
+                        <div class="h-56 relative overflow-hidden">
+    
+                            <?php if(!empty($course['course_image'])): ?>
+                                <img 
+                                    src="<?= htmlspecialchars($course['course_image']) ?>" 
+                                    alt="<?= htmlspecialchars($course['course_title']) ?>"
+                                    class="w-full h-full object-cover">
+                            <?php else: ?>
+                                <div class="h-full bg-gradient-to-br from-blue-600 to-indigo-700 flex flex-col items-center justify-center relative">
+                                    <i class="fas fa-book-open text-white/20 text-8xl absolute -right-4 -bottom-4"></i>
+                                    <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center mb-4 border border-white/20 relative z-10">
+                                        <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <span class="absolute top-4 left-4 bg-white/20 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full border border-white/20">
                                 <?= htmlspecialchars($course['category']) ?>
                             </span>
+
                         </div>
 
                         <div class="p-10">

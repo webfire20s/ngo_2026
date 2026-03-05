@@ -4,11 +4,29 @@ include 'includes/db.php';
 
 // ADD COURSE
 if (isset($_POST['add_course'])) {
+
     $title = trim($_POST['title']);
     $description = trim($_POST['description']);
+    $imagePath = "";
 
-    $stmt = $conn->prepare("INSERT INTO courses (course_title, course_description) VALUES (?, ?)");
-    $stmt->bind_param("ss", $title, $description);
+    if (!empty($_FILES['course_image']['name'])) {
+
+        $uploadDir = "../uploads/courses/";
+
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+
+        $fileName = time() . "_" . basename($_FILES["course_image"]["name"]);
+        $targetFile = $uploadDir . $fileName;
+
+        if (move_uploaded_file($_FILES["course_image"]["tmp_name"], $targetFile)) {
+            $imagePath = "uploads/courses/" . $fileName;
+        }
+    }
+
+    $stmt = $conn->prepare("INSERT INTO courses (course_title, course_description, course_image) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $title, $description, $imagePath);
     $stmt->execute();
 }
 
@@ -66,7 +84,7 @@ $courses = $conn->query("SELECT * FROM courses ORDER BY id DESC");
                             <div class="card-body">
                                 <h4 class="card-title">Add New Course</h4>
 
-                                <form method="POST">
+                                <form method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label>Course Title</label>
                                         <input type="text" name="title" class="form-control" required>
@@ -75,6 +93,11 @@ $courses = $conn->query("SELECT * FROM courses ORDER BY id DESC");
                                     <div class="form-group">
                                         <label>Course Description</label>
                                         <textarea name="description" class="form-control" rows="4" required></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Course Image</label>
+                                        <input type="file" name="course_image" class="form-control">
                                     </div>
 
                                     <button type="submit" name="add_course" class="btn btn-primary">
@@ -99,6 +122,7 @@ $courses = $conn->query("SELECT * FROM courses ORDER BY id DESC");
                                         <thead class="thead-light">
                                             <tr>
                                                 <th>Title</th>
+                                                <th>Image</th>
                                                 <th>Status</th>
                                                 <th>Actions</th>
                                             </tr>
@@ -107,6 +131,13 @@ $courses = $conn->query("SELECT * FROM courses ORDER BY id DESC");
                                         <?php while ($row = $courses->fetch_assoc()): ?>
                                             <tr>
                                                 <td><?= htmlspecialchars($row['course_title']) ?></td>
+                                                <td>
+                                                    <?php if(!empty($row['course_image'])): ?>
+                                                    <img src="../<?= $row['course_image'] ?>" width="80" style="border-radius:6px;">
+                                                    <?php else: ?>
+                                                    No Image
+                                                    <?php endif; ?>
+                                                </td>
                                                 <td>
                                                     <span class="badge <?= $row['status'] ? 'badge-success' : 'badge-secondary' ?>">
                                                         <?= $row['status'] ? 'Active' : 'Hidden' ?>
