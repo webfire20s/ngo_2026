@@ -41,7 +41,7 @@ include 'includes/db.php';
 <section class="py-24 -mt-12 relative z-10">
     <div class="max-w-7xl mx-auto px-4">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
 
             <?php
             $result = $conn->query("SELECT * FROM members ORDER BY id DESC");

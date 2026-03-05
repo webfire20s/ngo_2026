@@ -7,10 +7,14 @@ if (isset($_POST['add_member'])) {
     $name = $_POST['name'];
     $designation = $_POST['designation'];
 
-    $photo = $_FILES['photo']['name'];
-    $tmp  = $_FILES['photo']['tmp_name'];
+    $photo = "";
 
-    move_uploaded_file($tmp, "../uploads/members/" . $photo);
+    if (!empty($_FILES['photo']['name'])) {
+        $photo = $_FILES['photo']['name'];
+        $tmp = $_FILES['photo']['tmp_name'];
+
+        move_uploaded_file($tmp, "../uploads/members/" . $photo);
+    }
 
     $stmt = $conn->prepare(
         "INSERT INTO members (name, designation, photo) VALUES (?, ?, ?)"
@@ -76,7 +80,7 @@ $members = $conn->query("SELECT * FROM members ORDER BY id DESC");
                                     <input type="text" name="designation" class="form-control" placeholder="Designation" required>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="file" name="photo" class="form-control" required>
+                                    <input type="file" name="photo" class="form-control">
                                 </div>
                             </div>
                             <button type="submit" name="add_member" class="btn btn-primary mt-3">Add Member</button>
@@ -108,7 +112,13 @@ $members = $conn->query("SELECT * FROM members ORDER BY id DESC");
                                         <td><?= htmlspecialchars($row['name']); ?></td>
                                         <td><?= htmlspecialchars($row['designation']); ?></td>
                                         <td>
-                                            <img src="../uploads/members/<?= $row['photo']; ?>" width="60" style="height:auto; border-radius:0;">
+                                            <?php if(!empty($row['photo']) && file_exists("../uploads/members/".$row['photo'])): ?>
+                                                <img src="../uploads/members/<?= $row['photo']; ?>" width="60" style="height:auto; border-radius:0;">
+                                            <?php else: ?>
+                                                <div style="width:60px;height:60px;background:#e9ecef;border-radius:6px;display:flex;align-items:center;justify-content:center;">
+                                                    <i class="mdi mdi-account" style="font-size:28px;color:#6c757d;"></i>
+                                                </div>
+                                            <?php endif; ?>
                                         </td>
                                         <td>
                                             <a href="manage-members.php?delete=<?= $row['id']; ?>" 
