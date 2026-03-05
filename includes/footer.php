@@ -3,9 +3,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 
                 <div class="col-span-1 lg:col-span-1 animate__animated animate__fadeInUp">
-                    <h3 class="text-2xl font-black text-white mb-6 tracking-tighter">
-                        NEELKRANTI <span class="text-blue-500">.</span>
-                    </h3>
+                    <div class="mb-6">
+                        <img src="./images/logo2.jpg" alt="Neelkranti Logo" class="h-16 w-auto">
+                    </div>
                     <p class="leading-relaxed mb-8 text-sm opacity-80">
                         Revolutionizing social welfare and aquaculture through sustainable practices, community empowerment, and dedicated research. 
                     </p>

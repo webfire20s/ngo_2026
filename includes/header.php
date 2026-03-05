@@ -105,13 +105,10 @@
             <div class="flex justify-between items-center h-14">
                 
                 <div class="flex-shrink-0 flex items-center animate__animated animate__fadeInLeft">
-                    <a href="index.php" class="flex items-center gap-2 group">
-                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform">
-                            <i class="fas fa-water text-xl"></i>
-                        </div>
-                        <span class="text-xl font-extrabold tracking-tighter text-slate-900 group-hover:text-blue-600 transition-colors">
-                            NEELKRANTI<span class="text-blue-600">.</span>
-                        </span>
+                    <a href="index.php" class="flex items-center group">
+                        <img src="./images/logo.jpg" 
+                            alt="Neelkranti Foundation" 
+                            class="h-14 w-auto transition-transform duration-300 group-hover:scale-105">
                     </a>
                 </div>
                 
@@ -124,6 +121,7 @@
                         </button>
                         <div class="absolute top-full left-[-20px] mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 dropdown-animate p-2">
                             <a href="about.php" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Who We Are</a>
+                            <a href="awards.php" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Awards</a>
                             <a href="aims-objectives.php" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Aims & Objectives</a>
                             <a href="mission-vision.php" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Mission & Vision</a>
                             <a href="achievements.php" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition-colors">Achievements</a>
@@ -172,6 +170,7 @@
                 <div class="px-4 py-2 text-xs font-black text-slate-400 uppercase tracking-widest">Quick Links</div>
                 <div class="grid grid-cols-2 gap-2">
                     <a href="members.php" class="text-slate-600 font-medium px-4 py-2 hover:text-blue-600">Members</a>
+                    <a href="awards.php" class="text-slate-600 font-medium px-4 py-2 hover:text-blue-600">Awards</a>
                     <a href="activities.php" class="text-slate-600 font-medium px-4 py-2 hover:text-blue-600">Activities</a>
                     <a href="courses.php" class="text-slate-600 font-medium px-4 py-2 hover:text-blue-600">Courses</a>
                     <a href="products.php" class="text-slate-600 font-medium px-4 py-2 hover:text-blue-600">Products</a>
