@@ -1,0 +1,39 @@
+done rethemeing
+
+navbar 
+header
+webfooter
+index
+about
+mission
+objectives
+achievments
+campaigns
+campaign_detail
+donate
+submit_donation
+members
+notices
+gallery
+contact
+
+==========================================================
+turned into sanatan culture nd hindi woth language translator
+
+
+index
+about
+mission            removed rest two 
+campaigns
+campaign_detail
+donate
+submit_donation
+members
+notices
+gallery
+contact
+navbar
+header
+webfooter
+register 
+==================================================================
