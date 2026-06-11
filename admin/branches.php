@@ -8,28 +8,26 @@ $stmt = $pdo->query("
     SELECT
         b.*,
 
-        COUNT(m.id) AS total_members,
+        COUNT(DISTINCT u.id) AS total_members,
 
-        SUM(
-            CASE
-                WHEN m.status='active'
-                THEN 1
-                ELSE 0
-            END
-        ) AS active_members,
+        COUNT(DISTINCT CASE
+            WHEN m.status='active'
+            THEN u.id
+        END) AS active_members,
 
-        SUM(
-            CASE
-                WHEN m.status='expired'
-                THEN 1
-                ELSE 0
-            END
-        ) AS expired_members
+        COUNT(DISTINCT CASE
+            WHEN m.status='expired'
+            THEN u.id
+        END) AS expired_members
 
     FROM branches b
 
+    LEFT JOIN users u
+        ON b.id = u.branch_id
+        AND u.role='member'
+
     LEFT JOIN memberships m
-        ON b.id = m.branch_id
+        ON u.id = m.user_id
 
     GROUP BY b.id
 

@@ -38,9 +38,37 @@ REFERENCES branches(id)
 ON DELETE SET NULL;
 
 
+ALTER TABLE users
+ADD branch_id INT NULL;
+
+ALTER TABLE branches
+ADD COLUMN username VARCHAR(100) NULL,
+ADD COLUMN password VARCHAR(255) NULL;
+
+ALTER TABLE users
+MODIFY role ENUM(
+    'admin',
+    'staff',
+    'member',
+    'branch_manager'
+);
 
 
+UPDATE branches
+SET
+username='delhi_branch',
+password='$2y$10$9PuX0Ku8sM9nL9y1yghsd.SQX3eFgiQNGN7bAf5Ta9dbTAn6JqULW'
+WHERE id=1;
 
+
+UPDATE users
+SET role='branch_manager',
+    branch_id=1
+WHERE id=YOUR_USER_ID;
+
+
+ALTER TABLE transactions
+ADD branch_id INT NULL AFTER user_id;
 
 
 

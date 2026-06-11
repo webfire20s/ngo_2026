@@ -55,15 +55,47 @@ if (!$data) {
 $amount = $data['fee'];
 $rank = $data['rank'];
 
+/* MEMBER BRANCH */
+$stmt = $pdo->prepare("
+    SELECT branch_id
+    FROM users
+    WHERE id=?
+");
+$stmt->execute([$user_id]);
+
+$branch_id = $stmt->fetchColumn();
+
 /* SAVE TRANSACTION WITH PROOF */
 $stmt = $pdo->prepare("
-    INSERT INTO transactions 
-    (user_id, type, reference_id, amount, payment_method, status, transaction_id, proof)
-    VALUES (?, 'membership', ?, ?, 'upi', 'pending', ?, ?)
+    INSERT INTO transactions
+    (
+        user_id,
+        branch_id,
+        type,
+        reference_id,
+        amount,
+        payment_method,
+        status,
+        transaction_id,
+        proof
+    )
+    VALUES
+    (
+        ?,
+        ?,
+        'membership',
+        ?,
+        ?,
+        'upi',
+        'pending',
+        ?,
+        ?
+    )
 ");
 
 $stmt->execute([
     $user_id,
+    $branch_id,
     $membership_id,
     $amount,
     $utr,

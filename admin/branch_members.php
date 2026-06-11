@@ -10,12 +10,16 @@ $branch_id = (int)($_GET['branch_id'] ?? 0);
 $branches = $pdo->query("
     SELECT
         b.*,
-        COUNT(m.id) AS total_members
+        COUNT(u.id) AS total_members
     FROM branches b
-    LEFT JOIN memberships m
-        ON b.id = m.branch_id
+
+    LEFT JOIN users u
+        ON b.id = u.branch_id
+        AND u.role='member'
+
     GROUP BY b.id
     ORDER BY b.branch_name ASC
+    
 ")->fetchAll();
 
 $members = [];
@@ -38,22 +42,22 @@ if($branch_id){
             m.expiry_date,
             m.referral_code
 
-        FROM memberships m
+        FROM users u
 
-        JOIN users u
-            ON m.user_id = u.id
+        LEFT JOIN memberships m
+            ON u.id = m.user_id
 
         LEFT JOIN designations d
             ON m.designation_id = d.id
 
         LEFT JOIN branches b
-            ON m.branch_id = b.id
+            ON u.branch_id = b.id
 
-        WHERE m.branch_id = ?
+        WHERE u.branch_id = ?
+        AND u.role='member'
 
         ORDER BY u.name ASC
     ");
-
     $stmt->execute([$branch_id]);
 
     $members = $stmt->fetchAll();

@@ -29,9 +29,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['role'] = $user['role'];
 
         if ($user['role'] == 'admin') {
+
             header("Location: dashboard.php");
+
+        } elseif ($user['role'] == 'branch_manager') {
+
+            header("Location: ../branch/dashboard.php");
+
         } else {
+
             header("Location: ../user/dashboard.php");
+
         }
         exit;
 
