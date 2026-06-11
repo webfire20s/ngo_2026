@@ -71,11 +71,10 @@ while($row = $stmt->fetch()){
             
             <div class="flex-shrink-0 flex items-center">
                 <a href="index.php" class="text-2xl font-bold tracking-tight text-gray-900 brand-font flex items-center gap-3">
-                    <div class="w-12 h-12 bg-[#FF5722] rounded-full flex items-center justify-center text-white text-base font-bold shadow-md animate-pulse">
-                        ॐ
-                    </div>
+                    <img src="assets/logo.jpg" alt="विश्व हिंदू महासंघ" class="w-12 h-12 object-contain rounded-full shadow-md">
+                    
                     <div>
-                        <span class="block text-xl leading-tight font-extrabold uppercase tracking-tight text-gray-900">विश्व हिंदू महासंघ</span>
+                        <span class="block text-xl leading-tight font-extrabold uppercase tracking-tight text-gray-900">आर्यवर्त विश्व सनातन बिकास परिषद</span>
                         <span class="block text-[10px] text-gray-400 tracking-widest uppercase font-bold">॥ यतो धर्मस्ततो जयः ॥</span>
                     </div>
                 </a>
@@ -124,8 +123,8 @@ while($row = $stmt->fetch()){
                 
                 <div class="flex-shrink-0 flex items-center md:hidden">
                     <a href="index.php" class="text-base font-bold text-white brand-font flex items-center gap-2">
-                        <span class="w-6 h-6 bg-white text-[#FF5722] rounded-full flex items-center justify-center text-xs">ॐ</span>
-                        विश्व हिंदू महासंघ
+                        <img src="assets/logo.jpg" alt="विश्व हिंदू महासंघ" class="w-7 h-7 object-contain bg-white rounded-full p-0.5">
+                        आर्यवर्त विश्व सनातन बिकास परिषद
                     </a>
                 </div>
 
@@ -138,7 +137,7 @@ while($row = $stmt->fetch()){
                     <div class="relative group/dropdown py-2">
                         <button type="button" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 flex items-center gap-1.5 focus:outline-none">
                             <span>हमारे बारे में (About)</span>
-                            <svg class="w-3 h-3 text-orange-200 group-hover/dropdown:text-black transition-transform duration-300 group-hover/dropdown:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <svg class="w-3 h-3 text-orange-200 group-hover/dropdown:text-black transition-transform duration-300 group-hover/dropdown:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24 ">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                             </svg>
                         </button>

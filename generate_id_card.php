@@ -62,7 +62,7 @@ $pdf->Rect(2, 2, 82, 50);
 /* ===== HEADER ===== */
 $pdf->SetFont('Arial', 'B', 11);
 $pdf->SetXY(5, 5);
-$pdf->Cell(76, 5, 'YOUR NGO NAME', 0, 1, 'C');
+$pdf->Cell(76, 5, 'Aryavarta Vishwa Sanatan Vikas Parishad', 0, 1, 'C');
 
 $pdf->SetFont('Arial', '', 7);
 $pdf->SetX(5);

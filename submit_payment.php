@@ -114,7 +114,7 @@ $stmt->execute([
 
             <!-- Buttons -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="dashboard.php" class="bg-black text-white text-center px-8 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-gray-800 transition-all shadow-xl active:scale-95">
+                <a href="user/dashboard.php" class="bg-black text-white text-center px-8 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-gray-800 transition-all shadow-xl active:scale-95">
                     Go to Dashboard
                 </a>
                 <a href="index.php" class="bg-white border border-gray-200 text-black text-center px-8 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-gray-50 transition-all active:scale-95">

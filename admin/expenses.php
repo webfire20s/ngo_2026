@@ -4,6 +4,14 @@ require '../includes/db.php';
 require '../includes/header.php';
 require '../includes/sidebar.php';
 
+/* FETCH BRANCHES */
+$branches = $pdo->query("
+    SELECT id, branch_name
+    FROM branches
+    WHERE status='active'
+    ORDER BY branch_name
+")->fetchAll();
+
 /* ADD EXPENSE */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -11,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $amount = (float) $_POST['amount'];
     $expense_date = $_POST['expense_date'];
     $description = trim($_POST['description']);
+    $branch_id = !empty($_POST['branch_id'])
+        ? (int)$_POST['branch_id']
+        : null;
 
     if (
         !empty($category) &&
@@ -21,15 +32,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("
             INSERT INTO expenses
             (
+                branch_id,
                 category,
                 amount,
                 expense_date,
                 description
             )
-            VALUES (?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?)
         ");
 
         $stmt->execute([
+            $branch_id,
             $category,
             $amount,
             $expense_date,
@@ -61,12 +74,17 @@ if (isset($_GET['delete'])) {
 
 /* FILTERS */
 $category_filter = $_GET['category'] ?? '';
+$branch_filter = $_GET['branch_id'] ?? '';
 $from = $_GET['from'] ?? '';
 $to = $_GET['to'] ?? '';
 
 $query = "
-    SELECT *
-    FROM expenses
+    SELECT
+        e.*,
+        b.branch_name
+    FROM expenses e
+    LEFT JOIN branches b
+        ON e.branch_id = b.id
     WHERE 1
 ";
 
@@ -74,9 +92,16 @@ $params = [];
 
 /* CATEGORY FILTER */
 if (!empty($category_filter)) {
-
+    
     $query .= " AND category = ?";
     $params[] = $category_filter;
+}
+/* BRANCH FILTER */
+
+if (!empty($branch_filter)) {
+
+    $query .= " AND e.branch_id = ?";
+    $params[] = $branch_filter;
 }
 
 /* DATE FILTERS */
@@ -172,6 +197,26 @@ $totalExpense = $totalStmt->fetchColumn();
                 </div>
                 <div>
                     <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+                        Branch
+                    </label>
+
+                    <select name="branch_id"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs">
+
+                        <option value="">All Branches</option>
+
+                        <?php foreach($branches as $branch): ?>
+                            <option
+                                value="<?= $branch['id'] ?>"
+                                <?= $branch_filter == $branch['id'] ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($branch['branch_name']) ?>
+                            </option>
+                        <?php endforeach; ?>
+
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">
                         From Date
                     </label>
                     <input type="date" name="from" 
@@ -214,6 +259,24 @@ $totalExpense = $totalStmt->fetchColumn();
                     <input type="text" name="category" required 
                            class="w-full bg-slate-50/50 border border-slate-200 rounded-lg px-3 py-2 text-sm font-medium text-slate-900 focus:outline-none focus:border-slate-400 focus:bg-white transition-all shadow-inner"
                            placeholder="e.g., Vehicle Fuel, Maintenance">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">
+                        Branch
+                    </label>
+
+                    <select name="branch_id"
+                            class="w-full bg-slate-50/50 border border-slate-200 rounded-lg px-3 py-2">
+
+                        <option value="">Head Office</option>
+
+                        <?php foreach($branches as $branch): ?>
+                            <option value="<?= $branch['id'] ?>">
+                                <?= htmlspecialchars($branch['branch_name']) ?>
+                            </option>
+                        <?php endforeach; ?>
+
+                    </select>
                 </div>
 
                 <div>
@@ -267,6 +330,7 @@ $totalExpense = $totalStmt->fetchColumn();
                             <tr class="border-b border-slate-200 text-slate-400 text-[11px] font-bold uppercase tracking-wider bg-slate-50/20">
                                 <th class="px-6 py-3.5 font-mono w-16">ID</th>
                                 <th class="px-6 py-3.5">Category Class</th>
+                                <th class="px-6 py-3.5">Branch</th>
                                 <th class="px-6 py-3.5 w-32">Amount</th>
                                 <th class="px-6 py-3.5 w-36">Incurred Date</th>
                                 <th class="px-6 py-3.5">Contextual Description</th>
@@ -287,6 +351,11 @@ $totalExpense = $totalStmt->fetchColumn();
                                     <span class="inline-block bg-slate-100 text-slate-800 font-mono text-xs font-bold px-2.5 py-0.5 rounded border border-slate-200/50 tracking-tight">
                                         <?php echo htmlspecialchars($e['category']); ?>
                                     </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?= htmlspecialchars(
+                                        $e['branch_name'] ?? 'Head Office'
+                                    ) ?>
                                 </td>
                                 
                                 <!-- Curated Currency Numeric Processing Output -->

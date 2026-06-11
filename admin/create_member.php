@@ -7,6 +7,12 @@ require '../includes/sidebar.php';
 
 /* FETCH DESIGNATIONS */
 $designations = $pdo->query("SELECT * FROM designations")->fetchAll();
+$branches = $pdo->query("
+    SELECT *
+    FROM branches
+    WHERE status='active'
+    ORDER BY branch_name ASC
+")->fetchAll();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -18,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = sanitize($_POST['email']);
     $phone = sanitize($_POST['phone']);
     $designation_id = $_POST['designation_id'];
+    $branch_id = $_POST['branch_id'] ?? null;
     $referral = sanitize($_POST['referral'] ?? '');
 
     /* CHECK DUPLICATE EMAIL */
@@ -59,12 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         /* CREATE MEMBERSHIP (PENDING) */
         $stmt = $pdo->prepare("
             INSERT INTO memberships 
-            (user_id, designation_id, join_date, expiry_date, status, referral_code, referred_by)
-            VALUES (?, ?, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 1 YEAR), 'expired', ?, ?)
+            (user_id, designation_id, branch_id, join_date, expiry_date, status, referral_code, referred_by)
+            VALUES (?, ?, ?, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 1 YEAR), 'expired', ?, ?)
         ");
         $stmt->execute([
             $user_id,
             $designation_id,
+            $branch_id,
             $referral_code,
             $referred_by
         ]);
@@ -150,6 +158,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                     </div>
                 </div>
+                <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                    Branch Assignment <span class="text-rose-500">*</span>
+                </label>
+
+                <div class="relative">
+                    <select
+                        name="branch_id"
+                        required
+                        class="w-full bg-slate-50/50 border border-slate-200 rounded-lg px-4 py-2.5 text-sm font-medium text-slate-900 focus:outline-none focus:border-slate-400 focus:bg-white transition-all appearance-none shadow-inner cursor-pointer">
+
+                        <option value="">Select Branch</option>
+
+                        <?php foreach($branches as $branch): ?>
+                            <option value="<?php echo $branch['id']; ?>">
+                                <?php echo htmlspecialchars($branch['branch_name']); ?>
+                            </option>
+                        <?php endforeach; ?>
+
+                    </select>
+
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                        <span class="text-xs">▼</span>
+                    </div>
+                </div>
+            </div>
 
             </div>
 

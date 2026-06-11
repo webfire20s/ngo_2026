@@ -1,3 +1,59 @@
+CREATE TABLE branches (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    branch_name VARCHAR(255) NOT NULL,
+    branch_code VARCHAR(50) UNIQUE,
+
+    state VARCHAR(100),
+    district VARCHAR(100),
+    city VARCHAR(100),
+
+    address TEXT,
+
+    phone VARCHAR(20),
+    email VARCHAR(255),
+
+    status ENUM('active','inactive') DEFAULT 'active',
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE memberships
+ADD branch_id INT NULL AFTER designation_id;
+
+ALTER TABLE memberships
+ADD CONSTRAINT fk_membership_branch
+FOREIGN KEY (branch_id)
+REFERENCES branches(id)
+ON DELETE SET NULL;
+
+
+ALTER TABLE expenses
+ADD branch_id INT NULL AFTER id;
+
+ALTER TABLE expenses
+ADD CONSTRAINT fk_expense_branch
+FOREIGN KEY (branch_id)
+REFERENCES branches(id)
+ON DELETE SET NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 this file will have date wise sql queries
 date = 4 april
 

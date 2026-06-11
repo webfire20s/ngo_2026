@@ -8,12 +8,12 @@
             <div class="space-y-6">
                 <div class="flex items-center">
                     <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-1 shadow-md overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                        <div class="text-[10px] text-[#FF5722] font-bold text-center leading-tight">ॐ<br>महासंघ</div>
+                        <img src="assets/logo.jpg" alt="आर्यवर्त विश्व सनातन बिकास परिषद" class="w-full h-full object-fit">
                     </div>
                 </div>
                 
                 <p class="text-[13px] text-orange-50 leading-relaxed font-medium">
-                    विश्व हिंदू महासंघ का मिशन सनातन धर्म, हिंदू समाज और राष्ट्रहित की रक्षा व सशक्तिकरण के लिए पूर्णतः समर्पित है।
+                    आर्यवर्त विश्व सनातन बिकास परिषद का मिशन सनातन धर्म, हिंदू समाज और राष्ट्रहित की रक्षा व सशक्तिकरण के लिए पूर्णतः समर्पित है।
                 </p>
                 
                 <div class="space-y-3 text-[13px] font-medium text-orange-100">

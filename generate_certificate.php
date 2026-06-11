@@ -58,7 +58,7 @@ $pdf->Image('assets/logo.jpg', 20, 15, 25);
 
 /* NGO NAME */
 $pdf->SetFont('Arial', 'B', 22);
-$pdf->Cell(0, 12, 'YOUR NGO NAME', 0, 1, 'C');
+$pdf->Cell(0, 12, 'Aryavarta Vishwa Sanatan Vikas Parishad', 0, 1, 'C');
 
 /* SUBTITLE */
 $pdf->SetFont('Arial', '', 12);

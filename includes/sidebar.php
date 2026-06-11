@@ -43,11 +43,24 @@
             </div>
 
             <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5 px-2">Branches</span>
+                <div class="space-y-1">
+                    
+                    <a href="branches.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
+                        Branches
+                    </a>
+                    <a href="branch_members.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
+                        Branch Members
+                    </a>
+
+                </div>
+            </div>
+            <div>
                 <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5 px-2">Financials</span>
                 <div class="space-y-1">
-                    <!-- <a href="expenses.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
+                    <a href="expenses.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
                         Expenses
-                    </a> -->
+                    </a>
                     <a href="approve_payments.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
                         UPI Payments
                     </a>

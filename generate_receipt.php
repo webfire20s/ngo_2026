@@ -54,7 +54,7 @@ $pdf = new FPDF();
 $pdf->AddPage();
 
 $pdf->SetFont('Arial', 'B', 16);
-$pdf->Cell(0, 10, 'NGO Payment Receipt', 0, 1, 'C');
+$pdf->Cell(0, 10, 'Aryavarta Vishwa Sanatan Vikas Parishad Receipt', 0, 1, 'C');
 
 $pdf->Ln(10);
 
