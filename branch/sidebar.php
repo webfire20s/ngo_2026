@@ -62,16 +62,16 @@ if (session_status() === PHP_SESSION_NONE) {
                class="flex items-center px-4 py-3 rounded-lg hover:bg-slate-800 transition">
                 ⚙ Profile
             </a>
-
+            
+            <a href="../admin/logout.php"
+               class="block text-center bg-rose-600 hover:bg-rose-700 px-4 py-2 rounded-lg text-sm font-medium transition">
+                Logout
+            </a>
         </nav>
 
         <!-- Footer -->
         <div class="p-4 border-t border-slate-800">
 
-            <a href="../admin/logout.php"
-               class="block text-center bg-rose-600 hover:bg-rose-700 px-4 py-2 rounded-lg text-sm font-medium transition">
-                Logout
-            </a>
 
         </div>
 

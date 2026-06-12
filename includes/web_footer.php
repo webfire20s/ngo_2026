@@ -42,12 +42,13 @@
             <div class="lg:pl-12">
                 <h4 class="text-[16px] font-bold mb-6 text-white tracking-wide uppercase border-b border-orange-600 pb-2 inline-block">महत्वपूर्ण पृष्ठ (Pages)</h4>
                 <ul class="space-y-3 text-[14px] font-bold text-orange-50/90">
-                    <li><a href="index.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> मुख्य पृष्ठ (Home)</a></li>
-                    <li><a href="campaigns.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> हमारे अभियान (Campaigns)</a></li>
-                    <li><a href="donate.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> सहयोग राशि (Donate)</a></li>
-                    <li><a href="about.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> परिचय (About)</a></li>
-                    <li><a href="events.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> आगामी कार्यक्रम (Events)</a></li>
-                    <li><a href="contact.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> संपर्क सूत्र (Contact)</a></li>
+                    <li><a href="index.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> मुख्य पृष्ठ </a></li>
+                    <li><a href="campaigns.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> हमारे अभियान </a></li>
+                    <li><a href="donate.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> सहयोग राशि </a></li>
+                    <li><a href="about.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> परिचय</a></li>
+                    <li><a href="events.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> आगामी कार्यक्रम </a></li>
+                    <li><a href="contact.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> संपर्क सूत्र </a></li>
+                    <li><a href="admin/login.php" class="hover:text-black transition-colors duration-200 flex items-center gap-1.5 group"><span class="opacity-0 group-hover:opacity-100 transition-opacity">»</span> Login</a></li>
                 </ul>
             </div>
 

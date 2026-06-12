@@ -1,5 +1,46 @@
 <?php include 'includes/header.php'; ?>
-<?php include 'includes/navbar.php'; ?>
+<?php 
+require 'includes/db.php';
+include 'includes/navbar.php'; ?>
+<?php
+
+$latestNotices = $pdo->query("
+    SELECT
+        id,
+        title,
+        category,
+        short_description,
+        created_at
+    FROM notices
+    ORDER BY created_at DESC
+    LIMIT 3
+")->fetchAll(PDO::FETCH_ASSOC);
+
+$latestEvents = $pdo->query("
+    SELECT
+        id,
+        title,
+        short_description,
+        event_date,
+        event_time
+    FROM events
+    ORDER BY event_date ASC
+    LIMIT 3
+")->fetchAll(PDO::FETCH_ASSOC);
+
+$latestResources = $pdo->query("
+    SELECT
+        id,
+        title,
+        category,
+        description
+    FROM educational_materials
+    WHERE is_public = 1
+    ORDER BY created_at DESC
+    LIMIT 3
+")->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 
 <!-- <div class="bg-gray-900 text-white px-6 py-2 flex justify-between items-center text-[11px] font-mono border-b border-gray-800">
     <div class="flex items-center gap-2">
@@ -171,6 +212,139 @@ document.addEventListener('DOMContentLoaded', () => {
                 </a>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ================= SECTION 1: सूचनाएं एवं विज्ञप्तियां (NOTICES) ================= -->
+<section class="py-16 md:py-24 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- सेक्शन हेडर -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[#FF5722] bg-orange-50 px-4 py-1.5 rounded-full inline-block mb-3">॥ आवश्यक सूचनाएं ॥</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-950 brand-font tracking-tight">नवीनतम <span class="text-[#FF5722]">विज्ञप्तियां</span></h2>
+            </div>
+            <a href="notices.php" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#FF5722] hover:text-gray-950 transition-colors duration-300 border-b-2 border-orange-100 pb-1">
+                सभी सूचनाएं देखें 
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+
+        <!-- भगवा कार्ड्स ग्रिड (Bhagwaa Cards Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <?php foreach($latestNotices as $notice): ?>
+                <div class="bg-[#FF5722] text-white rounded-[2.5rem] p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <span class="bg-white/20 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider backdrop-blur-xs">
+                            <?= htmlspecialchars($notice['category']) ?>
+                        </span>
+                        <h4 class="font-bold text-white text-lg mt-4 mb-2 line-clamp-2 leading-snug">
+                            <?= htmlspecialchars($notice['title']) ?>
+                        </h4>
+                        <p class="text-sm text-orange-50 font-medium leading-relaxed line-clamp-3">
+                            <?= htmlspecialchars($notice['short_description']) ?>
+                        </p>
+                    </div>
+                    <div class="text-[11px] font-bold text-orange-200 uppercase tracking-wider mt-6 pt-4 border-t border-white/10 flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <?= date('d M Y', strtotime($notice['created_at'])) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SECTION 2: आगामी कार्यक्रम (EVENTS) ================= -->
+<section class="py-16 md:py-24 bg-gray-50 border-t border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- सेक्शन हेडर -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[#FF5722] bg-orange-100/50 px-4 py-1.5 rounded-full inline-block mb-3">॥ संगठन की गतिविधियाँ ॥</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-950 brand-font tracking-tight">आगामी <span class="text-[#FF5722]">कार्यक्रम एवं उत्सव</span></h2>
+            </div>
+            <a href="events.php" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#FF5722] hover:text-gray-950 transition-colors duration-300 border-b-2 border-orange-200 pb-1">
+                सभी कार्यक्रम देखें
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+
+        <!-- भगवा कार्ड्स ग्रिड (Bhagwaa Cards Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <?php foreach($latestEvents as $event): ?>
+                <div class="bg-[#FF5722] text-white rounded-[2.5rem] p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <div class="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-4 backdrop-blur-xs">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-white text-lg mb-2 line-clamp-2 leading-snug">
+                            <?= htmlspecialchars($event['title']) ?>
+                        </h4>
+                        <p class="text-sm text-orange-50 font-medium leading-relaxed line-clamp-3">
+                            <?= htmlspecialchars($event['short_description']) ?>
+                        </p>
+                    </div>
+                    
+                    <div class="text-[11px] font-bold text-orange-100 uppercase tracking-wider mt-6 pt-4 border-t border-white/10 flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <?= date('d M Y', strtotime($event['event_date'])) ?>
+                        <?php if(!empty($event['event_time'])): ?>
+                            <span class="text-white/30">|</span> <span class="text-orange-200"><?= htmlspecialchars($event['event_time']) ?></span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SECTION 3: साहित्य एवं ज्ञान केंद्र (RESOURCES) ================= -->
+<section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- सेक्शन हेडर -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[#FF5722] bg-orange-50 px-4 py-1.5 rounded-full inline-block mb-3">॥ डिजिटल पुस्तकालय ॥</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-950 brand-font tracking-tight">ज्ञान एवं <span class="text-[#FF5722]">साहित्य केंद्र</span></h2>
+            </div>
+            <a href="resources.php" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#FF5722] hover:text-gray-950 transition-colors duration-300 border-b-2 border-orange-100 pb-1">
+                सभी साहित्य देखें
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+
+        <!-- भगवा कार्ड्स ग्रिड (Bhagwaa Cards Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <?php foreach($latestResources as $resource): ?>
+                <div class="bg-[#FF5722] text-white rounded-[2.5rem] p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <span class="bg-white/20 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider backdrop-blur-xs">
+                            <?= htmlspecialchars($resource['category']) ?>
+                        </span>
+                        <h4 class="font-bold text-white text-lg mt-4 mb-2 line-clamp-2 leading-snug">
+                            <?= htmlspecialchars($resource['title']) ?>
+                        </h4>
+                        <p class="text-sm text-orange-50 font-medium leading-relaxed line-clamp-3">
+                            <?= htmlspecialchars(substr($resource['description'], 0, 100)) ?>...
+                        </p>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-orange-200 uppercase tracking-widest">संरचनात्मक अध्ययन</span>
+                        <span class="text-xs font-bold text-white bg-white/10 px-4 py-1.5 rounded-full hover:bg-white hover:text-[#FF5722] transition-all duration-300 backdrop-blur-xs">
+                            डाउनलोड करें →
+                        </span>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
     </div>
 </section>
 

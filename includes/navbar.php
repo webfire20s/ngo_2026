@@ -130,13 +130,13 @@ while($row = $stmt->fetch()){
 
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="index.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
-                        मुख्य पृष्ठ (Home)
+                        मुख्य पृष्ठ 
                         <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
                     </a>
 
                     <div class="relative group/dropdown py-2">
                         <button type="button" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 flex items-center gap-1.5 focus:outline-none">
-                            <span>हमारे बारे में (About)</span>
+                            <span>हमारे परिचय </span>
                             <svg class="w-3 h-3 text-orange-200 group-hover/dropdown:text-black transition-transform duration-300 group-hover/dropdown:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24 ">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                             </svg>
@@ -151,16 +151,36 @@ while($row = $stmt->fetch()){
                         </div>
                     </div>
 
-                    <?php 
-                        foreach($nav_items as $file => $name): 
-                            if ($file === 'index.php') continue; 
-                    ?>
-                    <a href="<?php echo $file; ?>" 
-                       class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
-                        <?php echo $name; ?>
+                    
+
+                    <a href="donate.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        हमारे अभियान
                         <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
                     </a>
-                    <?php endforeach; ?>
+                    <a href="donate.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        सहयोग राशि
+                        <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                    </a>
+                    <a href="notices.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        सदस्य
+                        <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                    </a>
+                    <a href="notices.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        सूचना पट्ट
+                        <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                    </a>
+                    <a href="gallery.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        चित्र वीथिका
+                        <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                    </a>
+                    <a href="contact.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        संपर्क सूत्र
+                        <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                    </a>
+                    <a href="resources.php" class="px-4 py-2 text-[14px] font-bold text-white hover:text-black transition-colors duration-300 relative group">
+                        साहित्य केंद्र
+                        <span class="absolute bottom-1 left-4 right-4 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></span>
+                    </a>
                 </div>
 
                 <div class="hidden md:flex items-center">
@@ -185,11 +205,11 @@ while($row = $stmt->fetch()){
         <div id="mobile-menu" class="hidden md:hidden border-t border-orange-600 bg-[#FF5722] max-h-[calc(100vh-3.5rem)] overflow-y-auto rounded-b-2xl shadow-inner">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 
-                <a href="index.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">मुख्य पृष्ठ (Home)</a>
+                <a href="index.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">मुख्य पृष्ठ</a>
                 
                 <div class="space-y-1">
                     <button id="mobile-dropdown-toggle" type="button" class="w-full flex justify-between items-center px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors focus:outline-none">
-                        <span>हमारे बारे में (About)</span>
+                        <span>हमारे बारे में</span>
                         <svg id="mobile-dropdown-arrow" class="w-3 h-3 text-orange-200 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                         </svg>
@@ -203,14 +223,30 @@ while($row = $stmt->fetch()){
                     </div>
                 </div>
 
-                <?php 
-                    foreach($nav_items as $file => $name): 
-                        if ($file === 'index.php') continue;
-                ?>
-                <a href="<?php echo $file; ?>" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
-                    <?php echo $name; ?>
+                
+
+
+                <a href="campaigns.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    हमारे अभियान
                 </a>
-                <?php endforeach; ?>
+                <a href="donate.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    सहयोग राशि
+                </a>
+                <a href="members.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    सदस्य
+                </a>
+                <a href="notices.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    सूचना पट्ट
+                </a>
+                <a href="gallery.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    चित्र वीथिका
+                </a>
+                <a href="contact.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    संपर्क सूत्र
+                </a>
+                <a href="resources.php" class="block px-4 py-2.5 rounded-xl text-[14px] font-bold text-white hover:bg-orange-600 transition-colors">
+                    साहित्य केंद्र
+                </a>
 
                 <div class="pt-4 px-2">
                     <a href="register.php" class="block w-full bg-white text-[#FF5722] text-center py-3 rounded-full text-[14px] font-bold hover:bg-orange-50 transition shadow-md">

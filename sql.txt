@@ -70,9 +70,35 @@ WHERE id=YOUR_USER_ID;
 ALTER TABLE transactions
 ADD branch_id INT NULL AFTER user_id;
 
+====================================================================================================================================================================================================================
 
 
 
+CREATE TABLE educational_materials (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    title VARCHAR(255) NOT NULL,
+    category VARCHAR(100) NOT NULL,
+
+    description TEXT,
+
+    file_name VARCHAR(255) DEFAULT NULL,
+    file_path VARCHAR(500) DEFAULT NULL,
+    file_type VARCHAR(50) DEFAULT NULL,
+
+    youtube_url VARCHAR(500) DEFAULT NULL,
+
+    is_public TINYINT(1) DEFAULT 1,
+
+    downloads INT DEFAULT 0,
+
+    created_by INT DEFAULT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX(category),
+    INDEX(is_public)
+);
 
 
 

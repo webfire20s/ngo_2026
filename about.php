@@ -4,8 +4,8 @@
 <section class="pt-40 pb-16 bg-gradient-to-b from-orange-50 to-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div data-aos="fade-right">
-            <span class="text-[12px] font-extrabold uppercase tracking-wider text-[#FF5722] mb-2 block">हमारा परिचय (Our Roots)</span>
-            <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 text-gray-900 uppercase">हमारे बारे में (About Us)</h1>
+            <span class="text-[12px] font-extrabold uppercase tracking-wider text-[#FF5722] mb-2 block">हमारा परिचय </span>
+            <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 text-gray-900 uppercase">हमारे बारे में </h1>
             <div class="h-[4px] w-20 bg-[#FF5722]"></div>
         </div>
     </div>
@@ -17,7 +17,7 @@
             
             <div class="relative order-2 lg:order-1" data-aos="fade-up">
                 <div class="aspect-[4/3] rounded-none overflow-hidden border-4 border-gray-900 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c29596ad?q=80&w=2070" class="w-full h-full object-cover">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpffEatZGgmjCJlKpkbGPCM2FurfT0LPa_Cw&s" class="w-full h-full object-fit">
                 </div>
                 <div class="absolute -bottom-6 -right-6 w-36 h-36 bg-gray-900 text-white rounded-none flex items-center justify-center border-4 border-[#FF5722] shadow-xl" data-aos="rotate-in" data-aos-delay="400">
                     <div class="text-center">
@@ -45,7 +45,7 @@
 
                 <div class="pt-4">
                     <a href="mission.php" class="inline-flex items-center group gap-4 bg-gray-900 text-white px-6 py-3.5 rounded-none hover:bg-[#FF5722] transition-colors duration-300">
-                        <span class="text-xs font-extrabold uppercase tracking-widest">हमारा संपूर्ण संकल्प (Our Full Mission)</span>
+                        <span class="text-xs font-extrabold uppercase tracking-widest">हमारा संपूर्ण संकल्प </span>
                         <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
@@ -132,12 +132,12 @@
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto" data-aos="fade-left">
                 <a href="register.php" class="w-full sm:w-auto">
                     <button class="w-full sm:w-auto bg-gray-900 text-white px-8 py-4 rounded-none text-xs font-extrabold uppercase tracking-widest hover:bg-white hover:text-gray-900 transition-colors duration-200 shadow-md">
-                        सदस्य बनें (Become a Member)
+                        सदस्य बनें 
                     </button>
                 </a>
                 <a href="contact.php" class="w-full sm:w-auto">
                     <button class="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-none text-xs font-extrabold uppercase tracking-widest hover:bg-white hover:text-[#FF5722] transition-all duration-200">
-                        संपर्क करें (Contact Us)
+                        संपर्क करें 
                     </button>
                 </a>
             </div>

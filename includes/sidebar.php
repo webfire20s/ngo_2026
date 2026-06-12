@@ -39,6 +39,9 @@
                     <a href="../admin/enquiries.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
                         Enquiries
                     </a>
+                    <a href="../admin/materials.php" class="flex items-center text-sm text-slate-600 hover:text-slate-900 font-medium hover:bg-slate-50 px-3 py-2 rounded-lg transition-all duration-200">
+                        Knowledge Center
+                    </a>
                 </div>
             </div>
 

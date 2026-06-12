@@ -126,22 +126,48 @@ $stmt->execute($params);
 $expenses = $stmt->fetchAll();
 
 /* TOTAL */
-$totalStmt = $pdo->prepare("
+/* TOTAL */
+
+$totalQuery = "
     SELECT SUM(amount)
     FROM expenses
     WHERE 1
-    " .
+";
 
-    (!empty($category_filter) ? " AND category = ?" : "") .
+$totalParams = [];
 
-    (!empty($from) ? " AND expense_date >= ?" : "") .
+/* CATEGORY */
+if (!empty($category_filter)) {
 
-    (!empty($to) ? " AND expense_date <= ?" : "")
-);
+    $totalQuery .= " AND category = ?";
+    $totalParams[] = $category_filter;
+}
 
-$totalStmt->execute($params);
+/* BRANCH */
+if (!empty($branch_filter)) {
 
-$totalExpense = $totalStmt->fetchColumn();
+    $totalQuery .= " AND branch_id = ?";
+    $totalParams[] = $branch_filter;
+}
+
+/* FROM */
+if (!empty($from)) {
+
+    $totalQuery .= " AND expense_date >= ?";
+    $totalParams[] = $from;
+}
+
+/* TO */
+if (!empty($to)) {
+
+    $totalQuery .= " AND expense_date <= ?";
+    $totalParams[] = $to;
+}
+
+$totalStmt = $pdo->prepare($totalQuery);
+$totalStmt->execute($totalParams);
+
+$totalExpense = $totalStmt->fetchColumn() ?: 0;
 ?>
 
 <!-- Main Content Container Block -->
